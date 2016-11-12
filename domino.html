@@ -1,0 +1,53 @@
+<!-- Dibujo de un rectángulo en un canvas. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dibujar un rect&aacute;ngulo</title>
+		<style type="text/css">
+			#dibujarRectangulo{
+				display: block;
+			    margin: auto;
+			    width: 50%;
+
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id = "dibujarRectangulo" width = "600" height = "1500"
+		style = "border: 1px solid black;">
+		Su navegador no soporta el elemento canvas.
+		</canvas>
+		<script>
+			var canvas = document.getElementById("dibujarRectangulo");
+			var contexto = canvas.getContext("2d");
+			//linea de en medio
+			contexto.beginPath();
+			contexto.moveTo(300, 0);
+			contexto.lineTo(300, 1500);
+			contexto.stroke();
+			//lineas horizontales
+			for (var h = 0; h <= 6; h++) {
+				contexto.beginPath();
+				contexto.moveTo(0, 250*h);
+				contexto.lineTo(600, 250*h);
+				contexto.stroke();
+			}
+			
+			//loop para las dos columnas
+			for (var k = 0; k < 2; k++) {
+				//loop para dibujar por columnas
+				for (var j =  0; j < 3; j++) {
+					//fichas de domino primer linea
+					for (var i = 0; i < 3; i++) {
+						contexto.strokeRect( (70+(300*k))+(70*i), 50+(250*j), 50, 80);
+					}
+					//fichas de domino segunda linea
+					for (var i = 0; i < 3; i++) {
+						contexto.strokeRect( (70+(300*k))+(70*i), 140+(250*j), 50, 80);
+					}	
+				}
+			}
+		</script>
+	</body>
+</html>
