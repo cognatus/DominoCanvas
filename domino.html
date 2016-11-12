@@ -33,19 +33,82 @@
 				contexto.lineTo(600, 250*h);
 				contexto.stroke();
 			}
-			
-			//loop para las dos columnas
+
+			//loop para la sdos columnas
 			for (var k = 0; k < 2; k++) {
 				//loop para dibujar por columnas
-				for (var j =  0; j < 3; j++) {
-					//fichas de domino primer linea
+				for (var j =  0; j < 6; j++) {
 					for (var i = 0; i < 3; i++) {
-						contexto.strokeRect( (70+(300*k))+(70*i), 50+(250*j), 50, 80);
+
+						for (var h = 1; h < 4; h++) {
+							for (var n = 1; n < 3; n++) {
+
+								// parte de arriba de la ficha
+								// dibujar un circulos primera linea
+								contexto.beginPath();
+								contexto.arc(70+(17*n)+(300*k)+(70*i), 50+(10*h)+(250*j), 4, 0, Math.PI*2);
+								contexto.fill();
+								// dibujar un circulos segunda linea
+								contexto.beginPath();
+								contexto.arc(70+(17*n)+(300*k)+(70*i), 140+(10*h)+(250*j), 4, 0, Math.PI*2);
+								contexto.fill();
+
+
+								// parte de abajo de la ficha
+								// dibujar un circulos primera linea
+								contexto.beginPath();
+								contexto.arc(70+(17*n)+(300*k)+(70*i), 50+40+(10*h)+(250*j), 4, 0, Math.PI*2);
+								contexto.fill();
+								// dibujar un circulos segunda linea
+								contexto.beginPath();
+								contexto.arc(70+(17*n)+(300*k)+(70*i), 140+40+(10*h)+(250*j), 4, 0, Math.PI*2);
+								contexto.fill();
+							}
+						}
+
+						// circulos de en medio parte de arriba de la ficha
+						// dibujar un circulo medio primer linea
+						contexto.beginPath();
+						contexto.arc(70+25.5+(300*k)+(70*i), 50+20+(250*j), 4, 0, Math.PI*2);
+						contexto.fill();
+
+						// dibujar un circulo medio segunda linea
+						contexto.beginPath();
+						contexto.arc(70+25.5+(300*k)+(70*i), 140+20+(250*j), 4, 0, Math.PI*2);
+						contexto.fill();
+
+						// circulos de en medio parte de abajo de la ficha
+						// dibujar un circulo medio primer linea
+						contexto.beginPath();
+						contexto.arc(70+25.5+(300*k)+(70*i), 50+20+40+(250*j), 4, 0, Math.PI*2);
+						contexto.fill();
+
+						// dibujar un circulo medio segunda linea
+						contexto.beginPath();
+						contexto.arc(70+25.5+(300*k)+(70*i), 140+20+40+(250*j), 4, 0, Math.PI*2);
+						contexto.fill();
+
+
+
+						//fichas de domino primer linea
+						//ficha
+						contexto.strokeRect((70+(300*k))+(70*i), 50+(250*j), 50, 80);
+						//linea media
+						contexto.beginPath();
+						contexto.moveTo((70+(300*k))+(70*i), 50+(250*j)+40);
+						contexto.lineTo((70+(300*k))+(70*i)+50, 50+(250*j)+40);
+						contexto.stroke();
+
+
+						//fichas de domino segunda linea
+						//ficha
+						contexto.strokeRect((70+(300*k))+(70*i), 140+(250*j), 50, 80);
+						//linea media
+						contexto.beginPath();
+						contexto.moveTo((70+(300*k))+(70*i), 140+(250*j)+40);
+						contexto.lineTo((70+(300*k))+(70*i)+50, 140+(250*j)+40);
+						contexto.stroke();
 					}
-					//fichas de domino segunda linea
-					for (var i = 0; i < 3; i++) {
-						contexto.strokeRect( (70+(300*k))+(70*i), 140+(250*j), 50, 80);
-					}	
 				}
 			}
 		</script>
