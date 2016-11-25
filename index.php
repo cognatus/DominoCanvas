@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CRUD AJAX+PHP+MYSQL</title>
+  <title>Titulo crazy</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript" src="js/ajax.js"></script>
 </head>
@@ -12,38 +12,41 @@
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Byspel.com</a>
+        <a class="navbar-brand" href="#">Menu o algo</a>
       </div>
     </nav>
     <div class="container">
       <div class="starter-template">
-        <h1>CRUD PHP+Mysql+AJAX</h1>
-        <p class="lead">Aplicación gestión de clientes</p>
-        <button type="button" onclick="Nuevo();" class="btn btn-primary btn-lg" >
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Nuevo
+        <h1>Gestion de alumnos</h1>
+        <button type="button" data-toggle="modal" data-target="#modal" class="btn btn-primary btn-lg" >
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
         </button>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">Lista de Usuarios</div>
+        <div class="panel-heading">Lista de Alumnos</div>
         <table class="table">
           <thead>
             <tr>
-              <th>#</th>
+              <th>Boleta</th>
               <th>Nombres</th>
-              <th>Ocupación</th>
-              <th>Teléfono</th>
-              <th>Sito Web</th>
+              <th>Apellido Paterno</th>
+              <th>Apellido Materno</th>
+              <th>Correo</th>
+              <th>Calificacion 1</th>
+              <th>Calificacion 2</th>
+              <th>Calificacion 3</th>
               <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
-          
-              ?>
               <tr>
                 <td>1</td>
-                <td>2></td>
+                <td>2</td>
                 <td>3</td>
                 <td>4</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
                 <td>5</td>
                 <td>
                   <div class="btn-group">
@@ -75,7 +78,6 @@
                   <label>Nombres</label>
                   <input name="nombres" class="form-control" required>
                 </div>
-
                 <div class="form-group">
                   <label>ocupacion</label>
                   <input name="ocupacion" class="form-control" required>
@@ -103,7 +105,6 @@
           </div>
         </div>
       </div>
-
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
