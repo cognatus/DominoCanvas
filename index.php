@@ -72,35 +72,38 @@
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 class="modal-title">Nuevo Usuario</h4>
             </div>
-            <form role="form" action="" name="frmClientes" onsubmit="Registrar(idP,accion); return false">
+            <form role="form" action="ingresar.php" method="POST" name="registrar">
               <div class="col-lg-12">
+                <br>
+                <div class="form-group">
+                  <label>Boleta</label>
+                  <input name="boleta" class="form-control" required>
+                </div>
                 <div class="form-group">
                   <label>Nombres</label>
                   <input name="nombres" class="form-control" required>
                 </div>
                 <div class="form-group">
-                  <label>ocupacion</label>
-                  <input name="ocupacion" class="form-control" required>
+                  <label>Apellido Paterno</label>
+                  <input name="app" class="form-control" required>
                 </div>
-
                 <div class="form-group">
-                  <label>Teléfono</label>
-                  <input name="telefono" class="form-control" required>
+                  <label>Apellido Materno</label>
+                  <input name="apm" class="form-control" required>
                 </div>
-
                 <div class="form-group">
-                  <label>Sitio Web</label>
-                  <input name="sitioweb" class="form-control" required>
+                  <label>Correo</label>
+                  <input name="mail" class="form-control" required>
                 </div>
-
-                <button type="submit" class="btn btn-info btn-lg">
-                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Registrar
+                <div class="form-group">
+                  <label>Contrasenia</label>
+                  <input name="contra" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-info btn-lg">Registrar
                 </button>
-
               </div>
             </form>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger btn-circle" data-dismiss="modal"><i class="fa fa-times"></i>x</button>
             </div>
           </div>
         </div>
