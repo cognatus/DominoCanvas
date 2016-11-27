@@ -1,3 +1,13 @@
+<?php
+  include 'conexion.php';
+
+  $base = conecta();
+  $query = "SELECT * FROM alumnos;";
+
+  $data = mysqli_query($base, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Titulo crazy</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript" src="js/ajax.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-inverse">
@@ -39,15 +48,19 @@
             </tr>
           </thead>
           <tbody>
+              <?php   
+                foreach($data as $fila):
+              ?>
               <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>5</td>
-                <td>5</td>
-                <td>5</td>
+                <td id="<?=$fila['boleta']?>"><?=$fila['boleta']?></td>
+                <td id="nombres<?=$fila['boleta']?>"><?=$fila['nombres']?></td>
+                <td id="apellidoP<?=$fila['boleta']?>"><?=$fila['apellidoP']?></td>
+                <td id="apellidoM<?=$fila['boleta']?>"><?=$fila['apellidoM']?></td>
+                <td id="mail<?=$fila['boleta']?>"><?=$fila['mail']?></td>
+                <td id="calif1<?=$fila['boleta']?>"><?=$fila['calif1']?></td>
+                <td id="calif2<?=$fila['boleta']?>"><?=$fila['calif2']?></td>
+                <td id="calif3<?=$fila['boleta']?>"><?=$fila['calif3']?></td>
+                <input type="hidden" id="contrasenia<?=$fila['boleta']?>" value="<?=$fila['contrasenia']?>">
                 <td>
                   <div class="btn-group">
                     <button type="button" class="btn btn-danger">Seleccione</button>
@@ -55,16 +68,19 @@
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a>Eliminar</a></li>
-                      <li><a>Actualizar</a></li>
+                      <li><a class="eliminar" href="#" data-toggle="modal" data-target="#modal3" id="<?=$fila['boleta']?>">Eliminar</a></li>
+                      <li><a class="actualizar" href="#" data-toggle="modal" data-target="#modal2" id="<?=$fila['boleta']?>">Actualizar</a></li>
                     </ul>
                   </div>
                 </td>
               </tr>
+              <?php   
+                endforeach;
+              ?>
              </tbody>
         </table>
       </div>
-
+      <!-- para agregar -->
       <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -108,8 +124,74 @@
           </div>
         </div>
       </div>
+      <!-- para modificar -->
+      <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Actualiza Alumno</h4>
+            </div>
+            <form role="form" action="actualizar.php" method="POST" name="actualizar">
+              <div class="col-lg-12">
+                <br>
+                <div class="form-group">
+                  <label>Boleta</label>
+                  <input id="nuevoBoleta" name="boleta" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Nombres</label>
+                  <input id="nuevoNombres" name="nombres" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Apellido Paterno</label>
+                  <input id="nuevoApp" name="app" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Apellido Materno</label>
+                  <input id="nuevoApm" name="apm" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Correo</label>
+                  <input id="nuevoMail" name="mail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label>Contrasenia</label>
+                  <input id="nuevoContra" name="contra" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-info btn-lg">Registrar
+                </button>
+              </div>
+            </form>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+                <input type="hidden" name="boletaBye">
+      <!-- para borrar -->
+      <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form  role="form" action="borrar.php" method="POST" name="borrar">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Borrar Alumno</h4>
+              </div>
+              <div class="modal-body">
+                Estas seguro de borrar el usuario?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Borrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/logica.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
   </html>
