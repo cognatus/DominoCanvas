@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	console.log('asdasdasd')
 	$(".actualizar").click(function(){
 		var boleta = $(this).attr('id');
 		var nombres = $("#nombres" + boleta).html();
@@ -14,6 +13,12 @@ $(document).ready(function(){
 		$("#nuevoApm").attr("value",apellidoM);
 		$("#nuevoMail").attr("value",mail);
 		$("#nuevoContra").attr("value",contrasenia);
+
+	});
+	$(".eliminar").click(function(){
+		var boleta = $(this).attr('id');
+
+		$("#boletaBye").attr("value",boleta);
 
 	});
 });

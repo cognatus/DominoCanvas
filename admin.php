@@ -5,6 +5,8 @@
   $query = "SELECT * FROM alumnos;";
 
   $data = mysqli_query($base, $query);
+  
+  session_start();
 
 ?>
 
@@ -21,7 +23,14 @@
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Menu o algo</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bienvenido <?=$_SESSION["nombre"]?><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="morir.php">Cerrar Sesion</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="container">
@@ -135,10 +144,7 @@
             <form role="form" action="actualizar.php" method="POST" name="actualizar">
               <div class="col-lg-12">
                 <br>
-                <div class="form-group">
-                  <label>Boleta</label>
-                  <input id="nuevoBoleta" name="boleta" class="form-control" required>
-                </div>
+                <input type="hidden" id="nuevoBoleta" name="boleta" class="form-control" required>
                 <div class="form-group">
                   <label>Nombres</label>
                   <input id="nuevoNombres" name="nombres" class="form-control" required>
@@ -168,7 +174,6 @@
           </div>
         </div>
       </div>
-                <input type="hidden" name="boletaBye">
       <!-- para borrar -->
       <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -179,10 +184,11 @@
                 <h4 class="modal-title" id="myModalLabel">Borrar Alumno</h4>
               </div>
               <div class="modal-body">
+                <input type="hidden" id="boletaBye" name="boletaBye">
                 Estas seguro de borrar el usuario?
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary">Borrar</button>
               </div>
             </form>
@@ -194,4 +200,4 @@
     <script src="js/logica.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
-  </html>
+</html>
