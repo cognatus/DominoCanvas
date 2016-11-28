@@ -554,7 +554,6 @@
 				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
 				contexto.fill();
 			}
-			
 		</script>
 		<!--Script para segundo canvas-->
 		<script>
@@ -663,21 +662,18 @@
 
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
-				dos(470, 50);
-				cinco(550, 50);
-				dos(630, 50);
-				cinco(710, 50);
-				cinco(470, 50+60);
-				dos(550, 50+60);
-				cinco(630, 50+60);
+				tres(470, 50);
+				tres(710, 50);
+				dos(470, 50+60);
+				cuatro(550, 50+60);
+				cuatro(630, 50+60);
 				dos(710, 50+60);
 
-				dos(470, 190);
-				cinco(550, 190);
-				dos(630, 190);
-				cinco(470, 190+60);
+				tres(550, 190);
+				tres(630, 190);
+				cuatro(470, 190+60);
 				dos(550, 190+60);
-				cinco(630, 190+60);
+				dos(630, 190+60);
 
 				//lineas centrales
 				//primer linea
@@ -745,6 +741,25 @@
 				contexto.strokeRect(170, 330+330, 60, 120);
 				contexto.strokeRect(250, 330+330, 60, 120);
 
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				dos(90, 330+50);
+				cinco(170, 330+50);
+				dos(250, 330+50);
+				seis(90, 330+50+60);
+				cuatro(170, 330+50+60);
+				seis(250, 330+50+60);
+				cinco(90, 330+190);
+				dos(170, 330+190);
+				cinco(250, 330+190);
+				cuatro(90, 330+190+60);
+				seis(170, 330+190+60);
+				cuatro(250, 330+190+60);
+				dos(90, 330+330);
+				cinco(170, 330+330);
+				seis(90, 330+330+60);
+				cuatro(170, 330+330+60);
+
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -808,6 +823,25 @@
 				contexto.strokeRect(490, 330+330, 60, 120);
 				contexto.strokeRect(570, 330+330, 60, 120);
 				contexto.strokeRect(650, 330+330, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				tres(490, 330+50);
+				cuatro(570, 330+50);
+				cinco(650, 330+50);
+				tres(490, 330+50+60);
+				cuatro(570, 330+50+60);
+				cinco(650, 330+50+60);
+				dos(490, 330+190);
+				tres(570, 330+190);
+				cuatro(650, 330+190);
+				dos(490, 330+190+60);
+				tres(570, 330+190+60);
+				cuatro(650, 330+190+60);
+				uno(490, 330+330);
+				dos(570, 330+330);
+				uno(490, 330+330+60);
+				dos(570, 330+330+60);
 
 				//lineas centrales
 				//primer linea
@@ -880,6 +914,23 @@
 				contexto.strokeRect(170, 330+800, 60, 120);
 				contexto.strokeRect(250, 330+800, 60, 120);
 
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				seis(90, 800+50);
+				seis(170, 800+50);
+				seis(250, 800+50);
+				dos(90, 800+50+60);
+				uno(170, 800+50+60);
+				cinco(90, 800+190);
+				cinco(170, 800+190);
+				cinco(250, 800+190);
+				dos(90, 800+190+60);
+				uno(170, 800+190+60);
+				cuatro(90, 800+330);
+				cuatro(170, 800+330);
+				dos(90, 800+330+60);
+				uno(170, 800+330+60);
+
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -945,6 +996,25 @@
 				contexto.strokeRect(570, 330+800, 60, 120);
 				contexto.strokeRect(650, 330+800, 60, 120);
 
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				uno(490, 800+50);
+				dos(570, 800+50);
+				tres(650, 800+50);
+				tres(490, 800+50+60);
+				dos(570, 800+50+60);
+				uno(650, 800+50+60);
+				dos(490, 800+190);
+				tres(570, 800+190);
+				cuatro(650, 800+190);
+				tres(490, 800+190+60);
+				dos(570, 800+190+60);
+				uno(650, 800+190+60);
+				tres(490, 800+330);
+				cuatro(570, 800+330);
+				tres(490, 800+330+60);
+				dos(570, 800+330+60);
+
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -988,107 +1058,8 @@
 			/*
 			/SEIS
 			*/
-
-			function uno(x,y) {
-				//circulos +15 primer linea
-				//+30  segunda linea
-				//+45 tercer linea
-				contexto.beginPath();
-				contexto.arc(30+x, 30+y, 5, 0, Math.PI*2);
-				contexto.fill();
-			}
-
-			function dos(x,y) {
-				//circulos +15 primer linea
-				//+30  segunda linea
-				//+45 tercer linea
-				contexto.beginPath();
-				contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-			}
-
-			function tres(x,y) {
-				//circulos +15 primer linea
-				//+30  segunda linea
-				//+45 tercer linea
-				contexto.beginPath();
-				contexto.arc(30+x, 30+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-			}
-
-			function cuatro(x,y) {
-				//circulos +15 primer linea
-				//+30  segunda linea
-				//+45 tercer linea
-				contexto.beginPath();
-				contexto.arc(15+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-			}
-
-			function cinco(x,y) {
-				//circulos +15 primer linea
-				//+30  segunda linea
-				//+45 tercer linea
-				contexto.beginPath();
-				contexto.arc(30+x, 30+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(15+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-			}
-
-			function seis(x,y) {
-				//circulos +15 primer linea
-				//+30  segunda linea
-				//+45 tercer linea
-				contexto.beginPath();
-				contexto.arc(15+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(15+x, 30+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 30+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(45+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-				contexto.beginPath();
-				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
-				contexto.fill();
-			}
 		</script>
-		<!--Script para segundo canvas-->
+		<!--Script para tercer canvas-->
 		<script>
 			var canvas = document.getElementById("dibujarRectangulo3");
 			var contexto = canvas.getContext("2d");
@@ -1103,7 +1074,7 @@
 			*/
 				//TEXTO
 				contexto.font="40px Georgia";
-				contexto.fillText("9",20,40);
+				contexto.fillText("13",20,40);
 				
 				//fichas
 				//primer linea				
@@ -1116,6 +1087,23 @@
 				contexto.strokeRect(150, 190, 60, 120);
 				contexto.strokeRect(230, 190, 60, 120);
 				contexto.strokeRect(310, 190, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				tres(70, 50);
+				cinco(150, 50);
+				tres(230, 50);
+				cinco(310, 50);
+				dos(70, 50+60);
+				cuatro(150, 50+60);
+				dos(230, 50+60);
+				cuatro(310, 50+60);
+				cuatro(70, 190);
+				dos(150, 190);
+				cuatro(230, 190);
+				cinco(70, 190+60);
+				tres(150, 190+60);
+				cinco(230, 190+60);
 
 				//lineas centrales
 				//primer linea
@@ -1161,7 +1149,7 @@
 			*/
 				//TEXTO
 				contexto.font="40px Georgia";
-				contexto.fillText("10",420,40);
+				contexto.fillText("14",420,40);
 				
 				//fichas
 				//primer linea				
@@ -1174,6 +1162,23 @@
 				contexto.strokeRect(550, 190, 60, 120);
 				contexto.strokeRect(630, 190, 60, 120);
 				contexto.strokeRect(710, 190, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				uno(550, 50);
+				dos(630, 50);
+				tres(710, 50);
+				uno(470, 50+60);
+				dos(550, 50+60);
+				tres(630, 50+60);
+				cuatro(710, 50+60);
+
+				dos(470, 190);
+				tres(550, 190);
+				cuatro(630, 190);
+				tres(470, 190+60);
+				cuatro(550, 190+60);
+				cinco(630, 190+60);
 
 				//lineas centrales
 				//primer linea
@@ -1225,7 +1230,7 @@
 			*/
 				//TEXTO
 				contexto.font="40px Georgia";
-				contexto.fillText("11",20,330+40);
+				contexto.fillText("15",20,330+40);
 				
 				//fichas
 				//primer linea de cuadros 				
@@ -1240,6 +1245,22 @@
 				contexto.strokeRect(90, 330+330, 60, 120);
 				contexto.strokeRect(170, 330+330, 60, 120);
 				contexto.strokeRect(250, 330+330, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				dos(90, 330+50);
+				dos(170, 330+50);
+				dos(250, 330+50);
+				tres(90, 330+50+60);
+				cuatro(250, 330+50+60);
+				seis(90, 330+190);
+				seis(170, 330+190);
+				seis(250, 330+190);
+				tres(90, 330+190+60);
+				cuatro(250, 330+190+60);
+				uno(90, 330+330);
+				uno(170, 330+330);
+				tres(90, 330+330+60);
 
 				//lineas centrales
 				//primer linea
@@ -1289,7 +1310,7 @@
 			*/
 				//TEXTO
 				contexto.font="40px Georgia";
-				contexto.fillText("12",420,330+40);
+				contexto.fillText("16",420,330+40);
 				
 				//fichas
 				//primer linea de cuadros 				
@@ -1304,6 +1325,25 @@
 				contexto.strokeRect(490, 330+330, 60, 120);
 				contexto.strokeRect(570, 330+330, 60, 120);
 				contexto.strokeRect(650, 330+330, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				uno(490, 330+50);
+				seis(570, 330+50);
+				dos(650, 330+50);
+				cuatro(490, 330+50+60);
+				cuatro(570, 330+50+60);
+				cuatro(650, 330+50+60);
+				uno(490, 330+190);
+				seis(570, 330+190);
+				dos(650, 330+190);
+				uno(490, 330+190+60);
+				uno(570, 330+190+60);
+				uno(650, 330+190+60);
+				uno(490, 330+330);
+				seis(570, 330+330);
+				cinco(490, 330+330+60);
+				cinco(570, 330+330+60);
 
 				//lineas centrales
 				//primer linea
@@ -1360,7 +1400,7 @@
 			*/
 				//TEXTO
 				contexto.font="40px Georgia";
-				contexto.fillText("13",20,800+40);
+				contexto.fillText("17",20,800+40);
 				
 				//fichas
 				//primer linea				
@@ -1375,6 +1415,23 @@
 				contexto.strokeRect(90, 330+800, 60, 120);
 				contexto.strokeRect(170, 330+800, 60, 120);
 				contexto.strokeRect(250, 330+800, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				tres(90, 800+50);
+				cuatro(170, 800+50);
+				cinco(250, 800+50);
+				dos(90, 800+50+60);
+				dos(170, 800+50+60);
+				dos(250, 800+50+60);
+				dos(90, 800+190);
+				tres(170, 800+190);
+				cuatro(250, 800+190);
+				uno(90, 800+190+60);
+				uno(170, 800+190+60);
+				uno(250, 800+190+60);
+				cuatro(90, 800+330);
+				cinco(170, 800+330);
 
 				//lineas centrales
 				//primer linea
@@ -1425,7 +1482,7 @@
 			*/
 				//TEXTO
 				contexto.font="40px Georgia";
-				contexto.fillText("14",420,800+40);
+				contexto.fillText("18",420,800+40);
 				
 				//fichas
 				//primer linea				
@@ -1440,6 +1497,24 @@
 				contexto.strokeRect(490, 330+800, 60, 120);
 				contexto.strokeRect(570, 330+800, 60, 120);
 				contexto.strokeRect(650, 330+800, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				cinco(490, 800+50);
+				cuatro(570, 800+50);
+				tres(650, 800+50);
+				tres(570, 800+50+60);
+				dos(650, 800+50+60);
+				seis(490, 800+190);
+				cinco(570, 800+190);
+				cuatro(650, 800+190);
+				uno(490, 800+190+60);
+				cuatro(570, 800+190+60);
+				tres(650, 800+190+60);
+				tres(490, 800+330);
+				dos(570, 800+330);
+				dos(490, 800+330+60);
+				cinco(570, 800+330+60);
 
 				//lineas centrales
 				//primer linea
@@ -1582,6 +1657,25 @@
 				contexto.strokeRect(170, 330, 60, 120);
 				contexto.strokeRect(250, 330, 60, 120);
 
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				dos(90,50);
+				seis(170,50);
+				tres(250,50);
+				dos(90,50+60);
+				seis(170,50+60);
+				tres(250,50+60);
+				tres(90,190);
+				dos(170,190);
+				seis(250,190);
+				tres(90,190+60);
+				dos(170,190+60);
+				seis(250,190+60);
+				seis(90,330);
+				tres(170,330);
+				seis(90,330+60);
+				tres(170,330+60);
+
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1645,6 +1739,25 @@
 				contexto.strokeRect(490, 330, 60, 120);
 				contexto.strokeRect(570, 330, 60, 120);
 				contexto.strokeRect(650, 330, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				dos(490, 50);
+				uno(570, 50);
+				seis(650, 50);
+				tres(490, 50+60);
+				cinco(570, 50+60);
+				cuatro(650, 50+60);
+				uno(490, 190);
+				seis(570, 190);
+				dos(650, 190);
+				cinco(490, 190+60);
+				cuatro(570, 190+60);
+				tres(650, 190+60);
+				seis(490, 330);
+				dos(570, 330);
+				cuatro(490, 330+60);
+				tres(570, 330+60);
 
 				//lineas centrales
 				//primer linea
@@ -1716,6 +1829,23 @@
 				contexto.strokeRect(170, 330+330+140, 60, 120);
 				contexto.strokeRect(250, 330+330+140, 60, 120);
 
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				uno(170, 330+50+140);
+				tres(250, 330+50+140);
+				seis(90, 330+50+60+140);
+				seis(170, 330+50+60+140);
+				seis(250, 330+50+60+140);
+				tres(90, 330+190+140);
+				uno(250, 330+190+140);
+				cinco(90, 330+190+60+140);
+				cinco(170, 330+190+60+140);
+				cinco(250, 330+190+60+140);
+				uno(90, 330+330+140);
+				tres(170, 330+330+140);
+				cuatro(90, 330+330+60+140);
+				cuatro(170, 330+330+60+140);
+
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1779,6 +1909,25 @@
 				contexto.strokeRect(490, 330+140+330, 60, 120);
 				contexto.strokeRect(570, 330+140+330, 60, 120);
 				contexto.strokeRect(650, 330+330+140, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				cuatro(490, 330+50+140);
+				dos(570, 330+50+140);
+				seis(650, 330+50+140);
+				cinco(490, 330+50+60+140);
+				tres(570, 330+50+60+140);
+				uno(650, 330+50+60+140);
+				cuatro(490, 330+190+140);
+				dos(570, 330+190+140);
+				seis(650, 330+190+140);
+				tres(490, 330+190+60+140);
+				uno(570, 330+190+60+140);
+				cinco(650, 330+190+60+140);
+				cuatro(490, 330+330+140);
+				dos(570, 330+330+140);
+				uno(490, 330+330+60+140);
+				cinco(570, 330+330+60+140);
 
 				//lineas centrales
 				//primer linea
@@ -1851,6 +2000,22 @@
 				contexto.strokeRect(170, 330+800+140, 60, 120);
 				contexto.strokeRect(250, 330+800+140, 60, 120);
 
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				dos(90, 800+50+140);
+				cuatro(170, 800+50+140);
+				cinco(250, 800+50+140);
+				seis(90, 800+50+60+140);
+				uno(170, 800+50+60+140);
+				cinco(90, 800+190+140);
+				dos(170, 800+190+140);
+				cuatro(250, 800+190+140);
+				uno(90, 800+190+60+140);
+				seis(250, 800+190+60+140);
+				cuatro(90, 800+330+140);
+				cinco(170, 800+330+140);
+				seis(170, 800+330+60+140);
+
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1915,6 +2080,25 @@
 				contexto.strokeRect(490, 330+800+140, 60, 120);
 				contexto.strokeRect(570, 330+800+140, 60, 120);
 				contexto.strokeRect(650, 330+800+140, 60, 120);
+
+				//dibujar circulos
+				//parte de abajo de la ficha +60 en y
+				cuatro(490, 800+50+140);
+				tres(570, 800+50+140);
+				dos(650, 800+50+140);
+				cinco(490, 800+50+60+140);
+				seis(570, 800+50+60+140);
+				uno(650, 800+50+60+140);
+				tres(490, 800+190+140);
+				dos(570, 800+190+140);
+				cuatro(650, 800+190+140);
+				uno(490, 800+190+60+140);
+				cinco(570, 800+190+60+140);
+				seis(650, 800+190+60+140);
+				dos(490, 800+330+140);
+				cuatro(570, 800+330+140);
+				seis(490, 800+330+60+140);
+				uno(570, 800+330+60+140);
 
 				//lineas centrales
 				//primer linea
