@@ -8,6 +8,12 @@
   
   session_start();
 
+  if (!isset($_SESSION["privilegio"])) {
+    header("Location: /ESCOM_tecweb/DominoCanvas/");
+  }else if( !$_SESSION["privilegio"] ){
+    header("Location: /ESCOM_tecweb/DominoCanvas/domino.html");
+  }
+
 ?>
 
 <!DOCTYPE html>

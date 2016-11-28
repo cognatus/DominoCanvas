@@ -6,7 +6,7 @@
 	$identificador = $_POST['identificador'];
 	$contra = $_POST['contra'];
 
-	$query = "SELECT * FROM admin WHERE id='$identificador' AND contrasenia='$contra';";
+	$query = "SELECT * FROM alumnos WHERE boleta='$identificador' AND contrasenia='$contra';";
 
 	$resultado = mysqli_query($base, $query);
 
@@ -15,8 +15,9 @@
 	if($usuario){
 		session_start();
 		$_SESSION["nombre"] = $usuario['nombres'].' '.$usuario['apellidoP'].' '.$usuario['apellidoM'];
+		$_SESSION["boleta"] = $usuario['boleta'];
 		$_SESSION["privilegio"] = $usuario['privilegio'];
-		header("Location: /ESCOM_tecweb/DominoCanvas/admin.php");
+		header("Location: /ESCOM_tecweb/DominoCanvas/domino.html");
 	}else{
 		echo 'Datos incorrectos.';
 	}
