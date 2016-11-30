@@ -17,7 +17,7 @@
 		$_SESSION["nombre"] = $usuario['nombres'].' '.$usuario['apellidoP'].' '.$usuario['apellidoM'];
 		$_SESSION["boleta"] = $usuario['boleta'];
 		$_SESSION["privilegio"] = $usuario['privilegio'];
-		header("Location: /ESCOM_tecweb/DominoCanvas/domino.html");
+		header("Location: /ESCOM_tecweb/DominoCanvas/domino.php");
 	}else{
 		echo 'Datos incorrectos.';
 	}
