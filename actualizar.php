@@ -13,7 +13,7 @@
 	$query = "UPDATE alumnos SET nombres='$nombres', apellidoP='$app', apellidoM='$apm', mail='$mail', contrasenia='$contra' WHERE boleta=$boleta;";
 
 	if(mysqli_query($base, $query)){
-		header("Location: /DominoCanvas/index.php");
+		header("Location: /DominoCanvas/admin.php");
 		die();
 	}else{
 		echo 'Error: ' . mysqli_error($base);
