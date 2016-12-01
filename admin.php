@@ -9,9 +9,9 @@
   session_start();
 
   if (!isset($_SESSION["privilegio"])) {
-    header("Location: /ESCOM_tecweb/DominoCanvas/");
+    header("Location: /DominoCanvas/");
   }else if( !$_SESSION["privilegio"] ){
-    header("Location: /ESCOM_tecweb/DominoCanvas/domino.php");
+    header("Location: /DominoCanvas/domino.php");
   }
 
 ?>

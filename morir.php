@@ -5,5 +5,5 @@
 
 	session_destroy(); 
 
-	header("Location: /ESCOM_tecweb/DominoCanvas");
+	header("Location: /DominoCanvas");
 ?>

@@ -13,7 +13,7 @@
 	$query = "INSERT INTO alumnos (boleta, nombres, apellidoP, apellidoM, mail, calif1, calif2, calif3, contrasenia, privilegio) VALUES ($boleta, '$nombres', '$app', '$apm', '$mail', 0, 0, 0, '$contra', 0);";
 
 	if(mysqli_query($base, $query)){
-		header("Location: /ESCOM_tecweb/DominoCanvas/index.php");
+		header("Location: /DominoCanvas/index.php");
 		die();
 	}else{
 		echo 'Error: ' . mysqli_error($base);
