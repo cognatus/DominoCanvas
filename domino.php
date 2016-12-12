@@ -212,16 +212,6 @@
 			<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body onresize="resizeDiv()">
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					BIenvenido <?=$_SESSION["nombre"]?>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon glyphicon-log-out"></span> Cerrar Sesion</a></li>
-				</ul>
-			</div>
-		</nav>
 		<form action="">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 			style = "border: 1px solid black;">
@@ -4745,7 +4735,17 @@
 				}
 			</script>
 		</form>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					BIenvenido <?=$_SESSION["nombre"]?>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon glyphicon-log-out"></span> Cerrar Sesion</a></li>
+				</ul>
+			</div>
+		</nav>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
