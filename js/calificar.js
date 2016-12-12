@@ -106,11 +106,11 @@ function calificar() {
 	for (var i=0; i < 8; i++) { 
 		for (var j=0; j < 6; j++) {
 			console.log(document.getElementById('input_'+i+'_'+j+'_0').value);
-			console.log(document.getElementById('input_'+i+'_'+j+'_1'));
+			console.log(document.getElementById('input_'+i+'_'+j+'_1').value);
 		}
 	}
 
-	document.getElementById("calficacion")[0].setAttribute("value", 10); 
+	document.getElementById("calficacion").setAttribute("value", 10); 
 
 	return false;
 
