@@ -12,11 +12,11 @@
 
 	$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";
 
-	/*if ($_SESSION["nivel"] == 1) {
+	if ($_SESSION["nivel"] == 1) {
 		$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";
-	}else if ($_SESSION["nivel"] == 2) {
+	}elseif ($_SESSION["nivel"] == 2) {
 		$query = "UPDATE alumnos SET calif2=$_POST['calficacion'], nivel=3 WHERE boleta=$_SESSION["boleta"];";
-	}else if ($_SESSION["nivel"] == 3) {
+	}elseif ($_SESSION["nivel"] == 3) {
 		$query = "UPDATE alumnos SET calif3=$_POST['calficacion'], nivel=0 WHERE boleta=$_SESSION["boleta"];";
 	}else{
 		echo "Tu calificacion no puede ser guardada";
@@ -28,7 +28,7 @@
 		session_destroy(); 
 
 		header("Location: /DominoCanvas");
-	}*/
+	}
 
 	if(mysqli_query($base, $query)){
 		echo "exito guardando calificacion";
