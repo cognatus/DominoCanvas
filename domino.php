@@ -1,4 +1,12 @@
+<?php
+  
+  session_start();
 
+  if (!isset($_SESSION["privilegio"])) {
+    header("Location: /DominoCanvas/");
+  }
+
+?>
 
 <!-- Dibujo de un rectángulo en un canvas. -->
 <!DOCTYPE html>
@@ -205,27 +213,15 @@
 	</head>
 	<body onresize="resizeDiv()">
 		<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					BIenvenido <?=$_SESSION["nombre"]?>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon glyphicon-log-out"></span> Cerrar Sesion</a></li>
+				</ul>
+			</div>
+		</nav>
 		<form action="">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 			style = "border: 1px solid black;">
