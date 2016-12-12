@@ -10,10 +10,7 @@
 
 	session_start();
 
-	echo $_SESSION["nivel"];
-	echo $_SESSION["boleta"];
-
-	/*$query = '';
+	$query = '';
 
 	if ($_SESSION["nivel"] == 1) {
 		$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";
@@ -38,6 +35,6 @@
 	}else{
 		echo 'Error: ' . mysqli_error($base);
 		echo $query;
-	}*/
+	}
 
  ?>
