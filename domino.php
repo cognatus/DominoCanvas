@@ -210,13 +210,13 @@
 
 		</style>
 	</head>
+		<form action="calificar.php" method="POST">
 	<body onresize="resizeDiv()">
 		<h1>Bienvenido <?=$_SESSION["nombre"]?></h1>
 		<br>
 		<h2>Instrucciones:</h2>
 		<p>Pon la ficha que consideres sea la que siga correspondiendo a la secuencia que existe</p>
 		<br>
-		<form action="calificar.php" method="POST">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 			style = "border: 1px solid black;">
 			Su navegador no soporta el elemento canvas.
@@ -4743,6 +4743,6 @@
 			<br>
 			<br>
 			<input type="submit" name="Calificaar">
-		</form>
 	</body>
+		</form>
 </html>
