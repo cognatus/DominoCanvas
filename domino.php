@@ -201,7 +201,7 @@
 			}
 
 		</style>
-		<sc
+  		<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body onresize="resizeDiv()">
 		<nav class="navbar navbar-inverse">
