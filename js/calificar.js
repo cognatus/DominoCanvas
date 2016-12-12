@@ -103,14 +103,21 @@ function calificar() {
 	domino[47][0] = 1;
 	domino[47][1] = 1;
 
+	var aux = 0;
+	var contador = 0;
+
 	for (var i=0; i < 8; i++) { 
 		for (var j=0; j < 6; j++) {
-			console.log(document.getElementById('input_'+i+'_'+j+'_0').value);
-			console.log(document.getElementById('input_'+i+'_'+j+'_1').value);
+			if (document.getElementById('input_'+i+'_'+j+'_0').value == domino[aux][0] && document.getElementById('input_'+i+'_'+j+'_1').value == domino[aux][1]) {
+				contador++;
+			}
+			aux++;
 		}
 	}
 
-	document.getElementById("calficacion").setAttribute("value", 10); 
+	var resultado = (contador*10)/48
+
+	document.getElementById("calficacion").setAttribute("value", resultado); 
 
 	return false;
 
