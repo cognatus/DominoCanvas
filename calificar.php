@@ -22,7 +22,6 @@
 		$query = "UPDATE alumnos SET calif3=$calif, nivel=0 WHERE boleta=$boleta;";
 	}else{
 		echo "Tu calificacion no puede ser guardada";
-		sleep(10);
 		session_start();
 
 		session_unset(); 
@@ -34,14 +33,11 @@
 
 	if(mysqli_query($base, $query)){
 		echo "exito guardando calificacion";
-		sleep(10);
 		session_start();
 
 		session_unset(); 
 
 		session_destroy(); 
-
-		header("Location: /DominoCanvas");
 	}else{
 		echo 'Error: ' . mysqli_error($base);
 		echo $query;
