@@ -11,6 +11,8 @@
 	session_start();
 
 	$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";
+
+	echo $query;
 /*
 	if ($_SESSION["nivel"] == 1) {
 		$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";
@@ -30,11 +32,11 @@
 		header("Location: /DominoCanvas");
 	}*/
 
-	if(mysqli_query($base, $query)){
+	/*if(mysqli_query($base, $query)){
 		echo "exito guardando calificacion";
 	}else{
 		echo 'Error: ' . mysqli_error($base);
 		echo $query;
-	}
+	}*/
 
  ?>
