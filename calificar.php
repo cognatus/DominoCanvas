@@ -30,11 +30,11 @@
 		header("Location: /DominoCanvas");
 	}
 
-	if(mysqli_query($base, $query)){
+	/*if(mysqli_query($base, $query)){
 		echo "exito guardando calificacion";
 	}else{
 		echo 'Error: ' . mysqli_error($base);
 		echo $query;
-	}
+	}*/
 
  ?>
