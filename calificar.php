@@ -97,6 +97,11 @@
 	$domino[47][0] = 1;
 	$domino[47][1] = 1;
 
+	$uno = 0;
+	$dos = 0;
+
+	echo $_POST['input_'+$uno+'_'+$dos+'_0'];
+
 	for ($i=0; $i < 8; $i++) { 
 		for ($j=0; $j < 6; $j++) { 
 			echo $_POST['input_'+$i+'_'+$j+'_0'];
