@@ -3,7 +3,7 @@
 	echo "Tu calficacion es:";
 	echo $_POST['calficacion'];
 	
-	session_start();
+	/*session_start();
 
 	include 'conexion.php';
 
@@ -32,5 +32,5 @@
 		echo 'Error: ' . mysqli_error($base);
 		echo $query;
 	}
-
+*/
  ?>
