@@ -119,7 +119,7 @@ function calificar() {
 
 	document.getElementById("calficacion").setAttribute("value", resultado); 
 
-	return false;
+	return true;
 
 
 }
