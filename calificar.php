@@ -7,21 +7,19 @@
 	include 'conexion.php';
 
 	$base = conecta();
+	$boleta = $_SESSION["boleta"];
+	$calif = $_POST['calficacion'];
 
 	session_start();
 
-	$query = 'khe verga';
+	$query = "";
 
-	/*$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";*/
-
-	echo $query;
-/*
 	if ($_SESSION["nivel"] == 1) {
-		$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";
+		$query = "UPDATE alumnos SET calif1=$calif, nivel=2 WHERE boleta=$boleta;";
 	}elseif ($_SESSION["nivel"] == 2) {
-		$query = "UPDATE alumnos SET calif2=$_POST['calficacion'], nivel=3 WHERE boleta=$_SESSION["boleta"];";
+		$query = "UPDATE alumnos SET calif2=$calif, nivel=3 WHERE boleta=$boleta;";
 	}elseif ($_SESSION["nivel"] == 3) {
-		$query = "UPDATE alumnos SET calif3=$_POST['calficacion'], nivel=0 WHERE boleta=$_SESSION["boleta"];";
+		$query = "UPDATE alumnos SET calif3=$calif, nivel=0 WHERE boleta=$boleta;";
 	}else{
 		echo "Tu calificacion no puede ser guardada";
 		sleep(10);
@@ -32,13 +30,13 @@
 		session_destroy(); 
 
 		header("Location: /DominoCanvas");
-	}*/
+	}
 
-	/*if(mysqli_query($base, $query)){
+	if(mysqli_query($base, $query)){
 		echo "exito guardando calificacion";
 	}else{
 		echo 'Error: ' . mysqli_error($base);
 		echo $query;
-	}*/
+	}
 
  ?>
