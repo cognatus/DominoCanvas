@@ -34,6 +34,14 @@
 
 	if(mysqli_query($base, $query)){
 		echo "exito guardando calificacion";
+		sleep(10);
+		session_start();
+
+		session_unset(); 
+
+		session_destroy(); 
+
+		header("Location: /DominoCanvas");
 	}else{
 		echo 'Error: ' . mysqli_error($base);
 		echo $query;
