@@ -205,17 +205,7 @@
 	</head>
 	<body onresize="resizeDiv()">
 		<nav class="navbar navbar-light bg-faded">
-			<a class="navbar-brand" href="#">Navbar</a>
 			<ul class="nav navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
 					<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
@@ -225,10 +215,6 @@
 					</div>
 				</li>
 			</ul>
-			<form class="form-inline float-xs-right">
-				<input class="form-control" type="text" placeholder="Search">
-				<button class="btn btn-outline-success" type="submit">Search</button>
-			</form>
 		</nav>
 		<form action="">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
