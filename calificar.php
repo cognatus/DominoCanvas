@@ -6,11 +6,11 @@
 
 	include 'conexion.php';
 
+	session_start();
+
 	$base = conecta();
 	$boleta = $_SESSION["boleta"];
 	$calif = $_POST['calficacion'];
-
-	session_start();
 
 	$query = "";
 
