@@ -10,7 +10,9 @@
 
 	session_start();
 
-	$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";
+	$query = 'khe verga';
+
+	/*$query = "UPDATE alumnos SET calif1=$_POST['calficacion'], nivel=2 WHERE boleta=$_SESSION["boleta"];";*/
 
 	echo $query;
 /*
