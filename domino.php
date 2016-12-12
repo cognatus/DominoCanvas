@@ -6,13 +6,201 @@
 		<title>Dibujar un rect&aacute;ngulo</title>
 		<style type="text/css">
 			.canvasLocas{
-				display: block;
-				margin: auto;
-				width: 50%;
+				display: block;margin: auto;
 			}
+			div{
+				position: absolute;z-index: 99;margin: 0;padding: 0;
+			}
+			span{
+				display: inline-block;width: 50%;margin: 0;padding: 0;
+				position: relative;
+			}
+			input{
+				width: 48px;height: 48px;border: none;
+				background-color: #e0e0e0;border-radius: 2px;
+				text-align: center;position: absolute;
+			}
+
+			/* PRIMER CANVAS */
+			span.div_0_span_0, span.div_0_span_1 {
+				height: 330px;
+			}
+			span.div_0_span_2, span.div_0_span_3 {
+				height: 465px;
+			}
+			span.div_0_span_4, span.div_0_span_5 {
+				height: 327px;
+			}
+
+			/* SEGUNDO CANVAS */
+			span.div_1_span_0, span.div_1_span_1 {
+				height: 330px;
+			}
+			span.div_1_span_2, span.div_1_span_3, span.div_1_span_4, span.div_1_span_5 {
+				height: 465px;
+			}
+
+			/* TERCER CANVAS */
+			span.div_2_span_0, span.div_2_span_1 {
+				height: 330px;
+			}
+			span.div_2_span_2, span.div_2_span_3, span.div_2_span_4, span.div_2_span_5 {
+				height: 465px;
+			}
+
+			/* CUARTO CANVAS */
+			span.div_3_span_0, span.div_3_span_1 {
+				height: 470px;
+			}
+			span.div_3_span_2, span.div_3_span_3 {
+				height: 465px;
+			}
+			span.div_3_span_4, span.div_3_span_5 {
+				height: 468px;
+			}
+
+			/* QUINTO CANVAS */
+			span.div_4_span_0, span.div_4_span_1, span.div_4_span_2, span.div_4_span_3, span.div_4_span_4, span.div_4_span_5 {
+				height: 370px;
+			}
+
+			/* SEXTO CANVAS */
+			span.div_5_span_0, span.div_5_span_1, span.div_5_span_2, span.div_5_span_3 {
+				height: 328px;
+			}
+			span.div_5_span_4, span.div_5_span_5 {
+				height: 458px;
+			}
+
+			/* SEPTIMO CANVAS */
+			span.div_6_span_0, span.div_6_span_1, span.div_6_span_2, span.div_6_span_3 {
+				height: 328px;
+			}
+			span.div_6_span_4, span.div_6_span_5 {
+				height: 457px;
+			}
+
+			/* OCTAVO CANVAS (ULTIMO) */
+			span.div_7_span_0, span.div_7_span_1 {
+				height: 330px;
+			}
+			span.div_7_span_2, span.div_7_span_3, span.div_7_span_4, span.div_7_span_5 {
+				height: 466px;
+			}
+
+			input#input_0_0_0, input#input_0_1_0, input#input_0_2_0, input#input_0_3_0, 
+			input#input_0_4_0, input#input_0_5_0, input#input_1_2_0, input#input_1_3_0, 
+			input#input_1_4_0, input#input_1_5_0, input#input_2_2_0, input#input_2_3_0,
+			input#input_2_4_0, input#input_2_5_0, input#input_3_0_0, input#input_3_1_0, 
+			input#input_3_2_0, input#input_3_3_0, input#input_3_4_0, input#input_3_5_0,
+			input#input_7_3_0, input#input_7_4_0, input#input_7_5_0 {
+				bottom: 84px;
+				right: 96px;
+			}
+			input#input_0_0_1, input#input_0_1_1, input#input_0_2_1, input#input_0_3_1,
+			input#input_0_4_1, input#input_0_5_1, input#input_1_2_1, input#input_1_3_1, 
+			input#input_1_4_1, input#input_1_5_1, input#input_2_2_1, input#input_2_3_1,
+			input#input_2_4_1, input#input_2_5_1, input#input_3_0_1, input#input_3_1_1, 
+			input#input_3_2_1, input#input_3_3_1, input#input_3_4_1, input#input_3_5_1,
+			input#input_7_3_1, input#input_7_4_1, input#input_7_5_1 {
+				bottom: 24px;
+				right: 96px;
+			}
+
+			input#input_1_0_0, input#input_1_1_0, input#input_2_0_0, input#input_2_1_0,
+			input#input_7_0_0, input#input_7_1_0 {
+				bottom: 84px;
+				right: 36px;
+			}
+			input#input_1_0_1, input#input_1_1_1, input#input_2_0_1, input#input_2_1_1,
+			input#input_7_0_1, input#input_7_1_1 {
+				bottom: 24px;
+				right: 36px;
+			}
+
+			input#input_4_0_0, input#input_4_5_0 {
+				bottom: 98px;
+				right: 128px; 
+			}
+			input#input_4_0_1, input#input_4_5_1{
+				bottom: 48px;
+				right: 94px; 
+			}
+
+			input#input_4_1_0{
+				bottom: 124px;
+				right: 94px; 
+			}
+			input#input_4_1_1{
+				bottom: 104px;
+				right: 38px; 
+			}
+			input#input_4_2_0{
+				bottom: 73px;
+				right: 181px; 
+			}
+			input#input_4_2_1{
+				bottom: 13px;
+				right: 181px; 
+			}
+			input#input_4_3_0{
+				bottom: 75px;
+				left: 155px;
+			}
+			input#input_4_3_1{
+				bottom: 16px;
+				left: 145px; 
+			}
+			input#input_4_4_0{
+				bottom: 67px;
+				right: 171px; 
+			}
+			input#input_4_4_1{
+				bottom: 7px;
+				right: 171px; 
+			}
+			input#input_5_0_0, input#input_5_1_0, input#input_5_2_0, input#input_5_3_0,
+			input#input_6_0_0, input#input_6_1_0, input#input_6_2_0, input#input_6_3_0 {
+				bottom: 82px;
+				right: 36px; 
+			}
+			input#input_5_0_1, input#input_5_1_1, input#input_5_2_1, input#input_5_3_1,
+			input#input_6_0_1, input#input_6_1_1, input#input_6_2_1, input#input_6_3_1 {
+				bottom: 22px;
+				right: 36px; 
+			}
+
+			input#input_5_4_0{
+				bottom: 216px;
+				right: 36px;
+			}
+			input#input_5_4_1{
+				bottom: 156px;
+				right: 36px;
+			}
+
+			input#input_5_5_0, input#input_6_4_0, input#input_6_5_0 {
+				bottom: 77px;
+				right: 96px;
+			}
+			input#input_5_5_1, input#input_6_4_1, input#input_6_5_1 {
+				bottom: 17px;
+				right: 96px;
+			}
+
+			input#input_7_2_0{
+				bottom: 223px;
+				right: 36px;
+			}
+
+			input#input_7_2_1{
+				bottom: 163px;
+				right: 36px;
+			}
+
 		</style>
 	</head>
-	<body>
+	<body onresize="resizeDiv()">
 		<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 		style = "border: 1px solid black;">
 		Su navegador no soporta el elemento canvas.
@@ -92,7 +280,6 @@
 				uno(170, 190);
 				cuatro(90, 190+60);
 				cuatro(170, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -123,7 +310,6 @@
 			/*
 			/UNO
 			*/
-
 			/*
 			DOS
 			*/
@@ -140,10 +326,8 @@
 				contexto.strokeRect(490, 190, 60, 120);
 				contexto.strokeRect(570, 190, 60, 120);
 				contexto.strokeRect(650, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
-
 				tres(490, 50);
 				tres(570, 50);
 				tres(650, 50);
@@ -154,7 +338,6 @@
 				seis(570, 190);
 				uno(490, 190+60);
 				uno(570, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -185,13 +368,11 @@
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 330);
 			contexto.lineTo(800, 330);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -212,7 +393,6 @@
 				contexto.strokeRect(90, 330+330, 60, 120);
 				contexto.strokeRect(170, 330+330, 60, 120);
 				contexto.strokeRect(250, 330+330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				seis(90, 330+50);
@@ -231,7 +411,6 @@
 				//blanca
 				seis(90, 330+330+60);
 				dos(170, 330+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -274,7 +453,6 @@
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -295,7 +473,6 @@
 				contexto.strokeRect(490, 330+330, 60, 120);
 				contexto.strokeRect(570, 330+330, 60, 120);
 				contexto.strokeRect(650, 330+330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(490, 330+50);
@@ -309,7 +486,6 @@
 				uno(650, 330+190+60);
 				dos(490, 330+330+60);
 				dos(570, 330+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -353,13 +529,11 @@
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 800);
 			contexto.lineTo(800, 800);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -376,7 +550,6 @@
 				contexto.strokeRect(90, 190+800, 60, 120);
 				contexto.strokeRect(170, 190+800, 60, 120);
 				contexto.strokeRect(250, 190+800, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cinco(90, 800+50);
@@ -389,7 +562,6 @@
 				tres(90, 800+190+60);
 				dos(170, 800+190);
 				seis(170, 800+190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -420,7 +592,6 @@
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/
@@ -437,7 +608,6 @@
 				contexto.strokeRect(490, 190+800, 60, 120);
 				contexto.strokeRect(570, 190+800, 60, 120);
 				contexto.strokeRect(650, 190+800, 60, 120);
-
 				cinco(490, 800+50);
 				dos(570, 800+50);
 				seis(650, 800+50);
@@ -446,7 +616,6 @@
 				cuatro(570, 800+190);
 				cinco(490, 800+190+60);
 				dos(570, 800+190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -477,7 +646,6 @@
 			/*
 			/SEIS
 			*/
-
 			function uno(x,y) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -486,7 +654,6 @@
 				contexto.arc(30+x, 30+y, 5, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function dos(x,y) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -498,7 +665,6 @@
 				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function tres(x,y) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -513,7 +679,6 @@
 				contexto.arc(15+x, 45+y, 5, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function cuatro(x,y) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -531,7 +696,6 @@
 				contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function cinco(x,y) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -552,7 +716,6 @@
 				contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function seis(x,y) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -605,7 +768,6 @@
 				contexto.strokeRect(150, 190, 60, 120);
 				contexto.strokeRect(230, 190, 60, 120);
 				contexto.strokeRect(310, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(70, 50);
@@ -616,14 +778,12 @@
 				dos(150, 50+60);
 				cinco(230, 50+60);
 				dos(310, 50+60);
-
 				dos(70, 190);
 				cinco(150, 190);
 				dos(230, 190);
 				cinco(70, 190+60);
 				dos(150, 190+60);
 				cinco(230, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -662,7 +822,6 @@
 			/*
 			/UNO		
 			*/
-
 			/*
 			DOS
 			*/
@@ -681,7 +840,6 @@
 				contexto.strokeRect(550, 190, 60, 120);
 				contexto.strokeRect(630, 190, 60, 120);
 				contexto.strokeRect(710, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				tres(470, 50);
@@ -690,13 +848,11 @@
 				cuatro(550, 50+60);
 				cuatro(630, 50+60);
 				dos(710, 50+60);
-
 				tres(550, 190);
 				tres(630, 190);
 				cuatro(470, 190+60);
 				dos(550, 190+60);
 				dos(630, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -735,13 +891,11 @@
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 330);
 			contexto.lineTo(800, 330);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -762,7 +916,6 @@
 				contexto.strokeRect(90, 330+330, 60, 120);
 				contexto.strokeRect(170, 330+330, 60, 120);
 				contexto.strokeRect(250, 330+330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(90, 330+50);
@@ -781,7 +934,6 @@
 				cinco(170, 330+330);
 				seis(90, 330+330+60);
 				cuatro(170, 330+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -824,7 +976,6 @@
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -845,7 +996,6 @@
 				contexto.strokeRect(490, 330+330, 60, 120);
 				contexto.strokeRect(570, 330+330, 60, 120);
 				contexto.strokeRect(650, 330+330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				tres(490, 330+50);
@@ -864,7 +1014,6 @@
 				dos(570, 330+330);
 				uno(490, 330+330+60);
 				dos(570, 330+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -908,13 +1057,11 @@
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 800);
 			contexto.lineTo(800, 800);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -935,7 +1082,6 @@
 				contexto.strokeRect(90, 330+800, 60, 120);
 				contexto.strokeRect(170, 330+800, 60, 120);
 				contexto.strokeRect(250, 330+800, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				seis(90, 800+50);
@@ -952,7 +1098,6 @@
 				cuatro(170, 800+330);
 				dos(90, 800+330+60);
 				uno(170, 800+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -996,7 +1141,6 @@
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/
@@ -1017,7 +1161,6 @@
 				contexto.strokeRect(490, 330+800, 60, 120);
 				contexto.strokeRect(570, 330+800, 60, 120);
 				contexto.strokeRect(650, 330+800, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(490, 800+50);
@@ -1036,7 +1179,6 @@
 				cuatro(570, 800+330);
 				tres(490, 800+330+60);
 				dos(570, 800+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1109,7 +1251,6 @@
 				contexto.strokeRect(150, 190, 60, 120);
 				contexto.strokeRect(230, 190, 60, 120);
 				contexto.strokeRect(310, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				tres(70, 50);
@@ -1126,7 +1267,6 @@
 				cinco(70, 190+60);
 				tres(150, 190+60);
 				cinco(230, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1165,7 +1305,6 @@
 			/*
 			/UNO		
 			*/
-
 			/*
 			DOS
 			*/
@@ -1184,7 +1323,6 @@
 				contexto.strokeRect(550, 190, 60, 120);
 				contexto.strokeRect(630, 190, 60, 120);
 				contexto.strokeRect(710, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(550, 50);
@@ -1194,14 +1332,12 @@
 				dos(550, 50+60);
 				tres(630, 50+60);
 				cuatro(710, 50+60);
-
 				dos(470, 190);
 				tres(550, 190);
 				cuatro(630, 190);
 				tres(470, 190+60);
 				cuatro(550, 190+60);
 				cinco(630, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1240,13 +1376,11 @@
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 330);
 			contexto.lineTo(800, 330);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -1267,7 +1401,6 @@
 				contexto.strokeRect(90, 330+330, 60, 120);
 				contexto.strokeRect(170, 330+330, 60, 120);
 				contexto.strokeRect(250, 330+330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(90, 330+50);
@@ -1283,7 +1416,6 @@
 				uno(90, 330+330);
 				uno(170, 330+330);
 				tres(90, 330+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1326,7 +1458,6 @@
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -1347,7 +1478,6 @@
 				contexto.strokeRect(490, 330+330, 60, 120);
 				contexto.strokeRect(570, 330+330, 60, 120);
 				contexto.strokeRect(650, 330+330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(490, 330+50);
@@ -1366,7 +1496,6 @@
 				seis(570, 330+330);
 				cinco(490, 330+330+60);
 				cinco(570, 330+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1410,13 +1539,11 @@
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 800);
 			contexto.lineTo(800, 800);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -1437,7 +1564,6 @@
 				contexto.strokeRect(90, 330+800, 60, 120);
 				contexto.strokeRect(170, 330+800, 60, 120);
 				contexto.strokeRect(250, 330+800, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				tres(90, 800+50);
@@ -1454,7 +1580,6 @@
 				uno(250, 800+190+60);
 				cuatro(90, 800+330);
 				cinco(170, 800+330);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1498,7 +1623,6 @@
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/
@@ -1519,7 +1643,6 @@
 				contexto.strokeRect(490, 330+800, 60, 120);
 				contexto.strokeRect(570, 330+800, 60, 120);
 				contexto.strokeRect(650, 330+800, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cinco(490, 800+50);
@@ -1537,7 +1660,6 @@
 				dos(570, 800+330);
 				dos(490, 800+330+60);
 				cinco(570, 800+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1581,8 +1703,6 @@
 			/*
 			/SEIS
 			*/
-
-
 			//loop para la sdos columnas
 			/*for (var k = 0; k < 2; k++) {
 				//loop para dibujar por columnas
@@ -1678,7 +1798,6 @@
 				contexto.strokeRect(90, 330, 60, 120);
 				contexto.strokeRect(170, 330, 60, 120);
 				contexto.strokeRect(250, 330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(90,50);
@@ -1697,7 +1816,6 @@
 				tres(170,330);
 				seis(90,330+60);
 				tres(170,330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1740,7 +1858,6 @@
 			/*
 			/UNO		
 			*/
-
 			/*
 			DOS
 			*/
@@ -1761,7 +1878,6 @@
 				contexto.strokeRect(490, 330, 60, 120);
 				contexto.strokeRect(570, 330, 60, 120);
 				contexto.strokeRect(650, 330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(490, 50);
@@ -1780,7 +1896,6 @@
 				dos(570, 330);
 				cuatro(490, 330+60);
 				tres(570, 330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1823,13 +1938,11 @@
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 140+330);
 			contexto.lineTo(800, 140+330);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -1850,7 +1963,6 @@
 				contexto.strokeRect(90, 330+330+140, 60, 120);
 				contexto.strokeRect(170, 330+330+140, 60, 120);
 				contexto.strokeRect(250, 330+330+140, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(170, 330+50+140);
@@ -1867,7 +1979,6 @@
 				tres(170, 330+330+140);
 				cuatro(90, 330+330+60+140);
 				cuatro(170, 330+330+60+140);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1910,7 +2021,6 @@
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -1931,7 +2041,6 @@
 				contexto.strokeRect(490, 330+140+330, 60, 120);
 				contexto.strokeRect(570, 330+140+330, 60, 120);
 				contexto.strokeRect(650, 330+330+140, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cuatro(490, 330+50+140);
@@ -1950,7 +2059,6 @@
 				dos(570, 330+330+140);
 				uno(490, 330+330+60+140);
 				cinco(570, 330+330+60+140);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -1994,13 +2102,11 @@
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 800+140);
 			contexto.lineTo(800, 800+140);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -2021,7 +2127,6 @@
 				contexto.strokeRect(90, 330+800+140, 60, 120);
 				contexto.strokeRect(170, 330+800+140, 60, 120);
 				contexto.strokeRect(250, 330+800+140, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(90, 800+50+140);
@@ -2037,7 +2142,6 @@
 				cuatro(90, 800+330+140);
 				cinco(170, 800+330+140);
 				seis(170, 800+330+60+140);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -2081,7 +2185,6 @@
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/
@@ -2102,7 +2205,6 @@
 				contexto.strokeRect(490, 330+800+140, 60, 120);
 				contexto.strokeRect(570, 330+800+140, 60, 120);
 				contexto.strokeRect(650, 330+800+140, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cuatro(490, 800+50+140);
@@ -2121,7 +2223,6 @@
 				cuatro(570, 800+330+140);
 				seis(490, 800+330+60+140);
 				uno(570, 800+330+60+140);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -2165,8 +2266,6 @@
 			/*
 			/SEIS
 			*/
-
-
 			//loop para la sdos columnas
 			/*for (var k = 0; k < 2; k++) {
 				//loop para dibujar por columnas
@@ -2251,11 +2350,8 @@
 				
 				//fichas	
 				contexto.translate(200, 170);
-
 				//contexto.rotate(35*Math.PI / 180);
-
 				contexto.rotate(35*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2267,12 +2363,8 @@
 				dos(-25, 60);
 				//puntos de abajo
 				cinco(-25, 60+60)
-
 				contexto.rotate(325*Math.PI / 180);
-
-
 				contexto.rotate(90*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2284,12 +2376,8 @@
 				seis(-30, 60);
 				//puntos de abajo
 				cuatro(-30, 60+60)
-
 				contexto.rotate(270*Math.PI / 180);
-
-
 				contexto.rotate(145*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2301,12 +2389,8 @@
 				dos(-35, 60);
 				//puntos de abajo
 				cinco(-35, 60+60)
-
 				contexto.rotate(215*Math.PI / 180);
-
-
 				contexto.rotate(215*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2318,12 +2402,8 @@
 				seis(-25, 60);
 				//puntos de abajo
 				cuatro(-25, 60+60)
-
 				contexto.rotate(145*Math.PI / 180);
-
-
 				contexto.rotate(270*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2335,12 +2415,8 @@
 				dos(-30, 60);
 				//puntos de abajo
 				cinco(-30, 60+60)
-
 				contexto.rotate(90*Math.PI / 180);
-
-
 				contexto.rotate(325*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2349,15 +2425,11 @@
 				contexto.lineTo(25, 120);
 				contexto.stroke();
 				contexto.rotate(35*Math.PI / 180);
-
 				//contexto.rotate(325*Math.PI / 180);
-
 				contexto.translate(-200, -165);
-
 			/*
 			/UNO
 			*/
-
 			/*
 			DOS
 			*/
@@ -2367,11 +2439,8 @@
 				
 				//fichas	
 				contexto.translate(600, 180);
-
 				contexto.rotate(325*Math.PI / 180);
-
 				contexto.rotate(35*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2381,12 +2450,8 @@
 				contexto.stroke();
 				//puntos de arriba
 				dos(-25, 60);
-
 				contexto.rotate(325*Math.PI / 180);
-
-
 				contexto.rotate(90*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2396,12 +2461,8 @@
 				contexto.stroke();
 				//puntos de arriba
 				uno(-30, 60);
-
 				contexto.rotate(270*Math.PI / 180);
-
-
 				contexto.rotate(145*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2411,12 +2472,8 @@
 				contexto.stroke();
 				//puntos de arriba
 				seis(-35, 60);
-
 				contexto.rotate(215*Math.PI / 180);
-
-
 				contexto.rotate(215*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2426,12 +2483,8 @@
 				contexto.stroke();
 				//puntos de arriba
 				cinco(-25, 60);
-
 				contexto.rotate(145*Math.PI / 180);
-
-
 				contexto.rotate(270*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2441,12 +2494,8 @@
 				contexto.stroke();
 				//puntos de arriba
 				cuatro(-30, 60);
-
 				contexto.rotate(90*Math.PI / 180);
-
-
 				contexto.rotate(325*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2455,20 +2504,16 @@
 				contexto.lineTo(25, 120);
 				contexto.stroke();
 				contexto.rotate(35*Math.PI / 180);
-
 				contexto.rotate(35*Math.PI / 180);
-
 				contexto.translate(-600, -165);
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 350);
 			contexto.lineTo(800, 350);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -2478,11 +2523,8 @@
 				
 				//fichas	
 				contexto.translate(200, 535);
-
 				contexto.rotate(35*Math.PI / 180);
-
 				contexto.rotate(35*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2494,12 +2536,8 @@
 				uno(-25, 60);
 				//puntos de abajo
 				cuatro(-25, 60+60);
-
 				contexto.rotate(325*Math.PI / 180);
-
-
 				contexto.rotate(90*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2511,12 +2549,8 @@
 				dos(-30, 60);
 				//puntos de abajo
 				cuatro(-30, 60+60);
-
 				contexto.rotate(270*Math.PI / 180);
-
-
 				contexto.rotate(145*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2528,12 +2562,8 @@
 				dos(-35, 60);
 				//puntos de abajo
 				seis(-35, 60+60);
-
 				contexto.rotate(215*Math.PI / 180);
-
-
 				contexto.rotate(215*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2545,12 +2575,8 @@
 				tres(-25, 60);
 				//puntos de abajo
 				seis(-25, 60+60);
-
 				contexto.rotate(145*Math.PI / 180);
-
-
 				contexto.rotate(270*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2562,12 +2588,8 @@
 				tres(-30, 60);
 				//puntos de abajo
 				cinco(-30, 60+60);
-
 				contexto.rotate(90*Math.PI / 180);
-
-
 				contexto.rotate(325*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2576,14 +2598,11 @@
 				contexto.lineTo(25, 120);
 				contexto.stroke();
 				contexto.rotate(35*Math.PI / 180);
-
 				contexto.rotate(325*Math.PI / 180);
-
 				contexto.translate(-200, -535);
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -2593,11 +2612,8 @@
 				
 				//fichas	
 				contexto.translate(600, 535);
-
 				contexto.rotate(35*Math.PI / 180);
-
 				contexto.rotate(45*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2609,12 +2625,8 @@
 				uno(-25, 60);
 				//puntos de abajo
 				cuatro(-25, 60+60);
-
 				contexto.rotate(315*Math.PI / 180);
-
-
 				contexto.rotate(120*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2626,11 +2638,8 @@
 				dos(-30, 60);
 				//puntos de abajo
 				cuatro(-30, 60+60);
-
 				contexto.rotate(240*Math.PI / 180);
-
 				contexto.rotate(200*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2642,12 +2651,8 @@
 				tres(-25, 60);
 				//puntos de abajo
 				seis(-25, 60+60);
-
 				contexto.rotate(160*Math.PI / 180);
-
-
 				contexto.rotate(270*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2659,12 +2664,8 @@
 				tres(-30, 60);
 				//puntos de abajo
 				cinco(-30, 60+60);
-
 				contexto.rotate(90*Math.PI / 180);
-
-
 				contexto.rotate(335*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2672,23 +2673,18 @@
 				contexto.moveTo(-35, 120);
 				contexto.lineTo(25, 120);
 				contexto.stroke();
-
 				contexto.rotate(25*Math.PI / 180);
-
 				contexto.rotate(325*Math.PI / 180);
-
 				contexto.translate(-600, -535);
 			/*
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 720);
 			contexto.lineTo(800, 720);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -2698,9 +2694,7 @@
 				
 				//fichas	
 				contexto.translate(200, 900);
-
 				//contexto.rotate(35*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 75, 60, 120);
 				//linea central
@@ -2708,9 +2702,7 @@
 				contexto.moveTo(-25, 135);
 				contexto.lineTo(35, 135);
 				contexto.stroke();
-
 				contexto.rotate(50*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2722,11 +2714,8 @@
 				dos(-25, 60);
 				//puntos de abajo
 				tres(-25, 60+60)
-
 				contexto.rotate(310*Math.PI / 180);
-
 				contexto.rotate(100*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2736,12 +2725,8 @@
 				contexto.stroke();
 				//puntos de arriba
 				tres(-30, 60);
-
 				contexto.rotate(260*Math.PI / 180);
-
-
 				contexto.rotate(150*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2753,12 +2738,8 @@
 				cuatro(-35, 60);
 				//puntos de abajo
 				uno(-35, 60+60)
-
 				contexto.rotate(210*Math.PI / 180);
-
-
 				contexto.rotate(210*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2768,12 +2749,8 @@
 				contexto.stroke();
 				//puntos de abajo
 				cuatro(-25, 60+60)
-
 				contexto.rotate(150*Math.PI / 180);
-
-
 				contexto.rotate(260*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2785,12 +2762,8 @@
 				seis(-30, 60);
 				//puntos de abajo
 				dos(-30, 60+60)
-
 				contexto.rotate(100*Math.PI / 180);
-
-
 				contexto.rotate(310*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2802,16 +2775,12 @@
 				uno(-35, 60);
 				//puntos de abajo
 				seis(-35, 60+60)
-
 				contexto.rotate(50*Math.PI / 180);
-
 				//contexto.rotate(325*Math.PI / 180);
-
 				contexto.translate(-200, -900);
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/
@@ -2821,11 +2790,8 @@
 				
 				//fichas	
 				contexto.translate(600, 900);
-
 				//contexto.rotate(35*Math.PI / 180);
-
 				contexto.rotate(35*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2837,12 +2803,8 @@
 				seis(-25, 60);
 				//puntos de abajo
 				dos(-25, 60+60)
-
 				contexto.rotate(325*Math.PI / 180);
-
-
 				contexto.rotate(90*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2854,12 +2816,8 @@
 				uno(-30, 60);
 				//puntos de abajo
 				tres(-30, 60+60)
-
 				contexto.rotate(270*Math.PI / 180);
-
-
 				contexto.rotate(145*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2869,12 +2827,8 @@
 				contexto.stroke();
 				//puntos de arriba
 				tres(-35, 60);
-
 				contexto.rotate(215*Math.PI / 180);
-
-
 				contexto.rotate(215*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-25, 60, 60, 120);
 				//linea central
@@ -2884,12 +2838,8 @@
 				contexto.stroke();
 				//puntos de abajo
 				cuatro(-25, 60+60)
-
 				contexto.rotate(145*Math.PI / 180);
-
-
 				contexto.rotate(270*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-30, 60, 60, 120);
 				//linea central
@@ -2901,12 +2851,8 @@
 				cinco(-30, 60);
 				//puntos de abajo
 				tres(-30, 60+60)
-
 				contexto.rotate(90*Math.PI / 180);
-
-
 				contexto.rotate(325*Math.PI / 180);
-
 				//rectangulo
 				contexto.strokeRect(-35, 60, 60, 120);
 				//linea central
@@ -2915,9 +2861,7 @@
 				contexto.lineTo(25, 120);
 				contexto.stroke();
 				contexto.rotate(35*Math.PI / 180);
-
 				//contexto.rotate(325*Math.PI / 180);
-
 				contexto.translate(-200, -1400);
 			/*
 			/SEIS
@@ -2949,8 +2893,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -2966,8 +2908,6 @@
 				cuatroEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -2983,8 +2923,6 @@
 				dosEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -2998,8 +2936,6 @@
 				seisEspecial(0, 0, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -3015,8 +2951,6 @@
 				cincoEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -3032,8 +2966,6 @@
 				tresEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -3045,11 +2977,9 @@
 				//puntos de abajo
 				unoEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 			/*
 			/UNO
 			*/
-
 			/*
 			DOS
 			*/
@@ -3057,9 +2987,7 @@
 				contexto.font="40px Georgia";
 				
 				contexto.translate(400, 0);
-
 				contexto.fillText("32",20,40);
-
 				contexto.translate(310, 190);
 				//rectangulo
 				contexto.strokeRect(0, 0, 60, 120);
@@ -3069,8 +2997,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -3086,8 +3012,6 @@
 				unoEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -3103,8 +3027,6 @@
 				dosEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -3120,8 +3042,6 @@
 				tresEspecial(0, 0+48, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -3137,8 +3057,6 @@
 				cuatroEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -3154,8 +3072,6 @@
 				cincoEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -3169,18 +3085,15 @@
 				//puntos de abajo
 				seisEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 				contexto.translate(-400, 0);
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 330);
 			contexto.lineTo(800, 330);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -3188,9 +3101,7 @@
 				contexto.font="40px Georgia";
 				
 				contexto.translate(0, 330);
-
 				contexto.fillText("33",20,40);
-
 				contexto.translate(310, 190);
 				//rectangulo
 				contexto.strokeRect(0, 0, 60, 120);
@@ -3200,8 +3111,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -3217,8 +3126,6 @@
 				tresEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -3234,8 +3141,6 @@
 				unoEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -3251,8 +3156,6 @@
 				//tresEspecial(0, 0+48, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -3268,8 +3171,6 @@
 				cincoEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -3285,8 +3186,6 @@
 				cuatroEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -3300,12 +3199,10 @@
 				//puntos de abajo
 				dosEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 				contexto.translate(0, -330);
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -3313,9 +3210,7 @@
 				contexto.font="40px Georgia";
 				
 				contexto.translate(400, 330);
-
 				contexto.fillText("34",20,40);
-
 				contexto.translate(310, 190);
 				//rectangulo
 				contexto.strokeRect(0, 0, 60, 120);
@@ -3325,8 +3220,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -3342,8 +3235,6 @@
 				tresEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -3359,8 +3250,6 @@
 				seisEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -3376,8 +3265,6 @@
 				dosEspecial(0, 0+48, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -3393,8 +3280,6 @@
 				cincoEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -3410,8 +3295,6 @@
 				unoEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -3425,19 +3308,16 @@
 				//puntos de abajo
 				cuatroEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 				contexto.translate(-400, -330);
 			/*
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 660);
 			contexto.lineTo(800, 660);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -3457,7 +3337,6 @@
 				contexto.strokeRect(150, 190, 60, 120);
 				contexto.strokeRect(230, 190, 60, 120);
 				contexto.strokeRect(310, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(70, 50);
@@ -3474,7 +3353,6 @@
 				dos(70, 190+60);
 				dos(150, 190+60);
 				dos(230, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -3514,13 +3392,11 @@
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/				
 				//fichas	
 				contexto.translate(0, 660);
-
 				//TEXTO
 				contexto.font="40px Georgia";
 				contexto.fillText("36",420,40);
@@ -3538,7 +3414,6 @@
 				contexto.strokeRect(490, 330, 60, 120);
 				contexto.strokeRect(570, 330, 60, 120);
 				contexto.strokeRect(650, 330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cinco(490, 50);
@@ -3556,7 +3431,6 @@
 				cinco(490, 330);
 				uno(570, 330);
 				seis(570, 330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -3596,7 +3470,6 @@
 				contexto.moveTo(650, 390);
 				contexto.lineTo(710, 390);
 				contexto.stroke();
-
 				contexto.translate(0, -660);
 			/*
 			/SEIS
@@ -3609,7 +3482,6 @@
 				contexto.arc((n*2)+x, (n*2)+y, z, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function dosEspecial(x,y,n,z) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -3621,7 +3493,6 @@
 				contexto.arc(n+x, (n*3)+y, z, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function tresEspecial(x,y,n,z) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -3636,7 +3507,6 @@
 				contexto.arc(n+x, (n*3)+y, z, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function cuatroEspecial(x,y,n,z) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -3654,7 +3524,6 @@
 				contexto.arc((n*3)+x, n+y, z, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function cincoEspecial(x,y,n,z) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -3675,7 +3544,6 @@
 				contexto.arc((n*3)+x, n+y, z, 0, Math.PI*2);
 				contexto.fill();
 			}
-
 			function seisEspecial(x,y,n,z) {
 				//circulos +15 primer linea
 				//+30  segunda linea
@@ -3726,8 +3594,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -3743,8 +3609,6 @@
 				cincoEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -3760,8 +3624,6 @@
 				cuatroEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -3777,8 +3639,6 @@
 				dosEspecial(0, 0+48, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -3794,8 +3654,6 @@
 				unoEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -3811,8 +3669,6 @@
 				seisEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -3826,11 +3682,9 @@
 				//puntos de abajo
 				cincoEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 			/*
 			/UNO
 			*/
-
 			/*
 			DOS
 			*/
@@ -3838,9 +3692,7 @@
 				contexto.font="40px Georgia";
 				
 				contexto.translate(400, 0);
-
 				contexto.fillText("32",20,40);
-
 				contexto.translate(310, 190);
 				//rectangulo
 				contexto.strokeRect(0, 0, 60, 120);
@@ -3850,8 +3702,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -3867,8 +3717,6 @@
 				dosEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -3884,8 +3732,6 @@
 				cincoEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -3901,8 +3747,6 @@
 				unoEspecial(0, 0+48, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -3918,8 +3762,6 @@
 				cuatroEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -3935,8 +3777,6 @@
 				//cincoEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -3950,18 +3790,15 @@
 				//puntos de abajo
 				tresEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 				contexto.translate(-400, 0);
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 330);
 			contexto.lineTo(800, 330);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -3969,9 +3806,7 @@
 				contexto.font="40px Georgia";
 				
 				contexto.translate(0, 330);
-
 				contexto.fillText("39",20,40);
-
 				contexto.translate(310, 190);
 				//rectangulo
 				contexto.strokeRect(0, 0, 60, 120);
@@ -3981,8 +3816,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -3998,8 +3831,6 @@
 				dosEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -4015,8 +3846,6 @@
 				seisEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -4032,8 +3861,6 @@
 				cuatroEspecial(0, 0+48, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -4049,8 +3876,6 @@
 				unoEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -4066,8 +3891,6 @@
 				cincoEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -4081,12 +3904,10 @@
 				//puntos de abajo
 				tresEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 				contexto.translate(0, -330);
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -4094,9 +3915,7 @@
 				contexto.font="40px Georgia";
 				
 				contexto.translate(400, 330);
-
 				contexto.fillText("34",20,40);
-
 				contexto.translate(310, 190);
 				//rectangulo
 				contexto.strokeRect(0, 0, 60, 120);
@@ -4106,8 +3925,6 @@
 				contexto.lineTo(60, 60);
 				contexto.stroke();
 				contexto.translate(-310, -190);
-
-
 				contexto.translate(270, 80);
 				contexto.rotate(315*Math.PI / 180);
 				//rectangulo
@@ -4123,8 +3940,6 @@
 				dosEspecial(0, 0+56, 14, 4.7)
 				contexto.rotate(45*Math.PI / 180);
 				contexto.translate(-270, -80);
-
-
 				contexto.translate(148, 80);
 				contexto.rotate(270*Math.PI / 180);
 				//rectangulo
@@ -4140,8 +3955,6 @@
 				cuatroEspecial(0, 0+52, 13, 4.3);
 				contexto.rotate(90*Math.PI / 180);
 				contexto.translate(-148, -80);
-
-
 				contexto.translate(60, 155);
 				contexto.rotate(225*Math.PI / 180);
 				//rectangulo
@@ -4157,8 +3970,6 @@
 				cincoEspecial(0, 0+48, 12, 4);
 				contexto.rotate(135*Math.PI / 180);
 				contexto.translate(-60, -155);
-
-
 				contexto.translate(120, 240);
 				contexto.rotate(135*Math.PI / 180);
 				//rectangulo
@@ -4174,8 +3985,6 @@
 				seisEspecial(0, 0+44, 11, 3.7);
 				contexto.rotate(225*Math.PI / 180);
 				contexto.translate(-120, -240);
-
-
 				contexto.translate(180, 220);
 				contexto.rotate(45*Math.PI / 180);
 				//rectangulo
@@ -4191,8 +4000,6 @@
 				unoEspecial(0, 0+40, 10, 3.3);
 				contexto.rotate(315*Math.PI / 180);
 				contexto.translate(-180, -220);
-
-
 				contexto.translate(180, 140);
 				//rectangulo
 				contexto.strokeRect(0, 0, 36, 72);
@@ -4206,19 +4013,16 @@
 				//puntos de abajo
 				dosEspecial(0, 0+36, 9, 3);
 				contexto.translate(-180, -140);
-
 				contexto.translate(-400, -330);
 			/*
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 660);
 			contexto.lineTo(800, 660);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -4240,7 +4044,6 @@
 				contexto.strokeRect(90, 330, 60, 120);
 				contexto.strokeRect(170, 330, 60, 120);
 				contexto.strokeRect(250, 330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				//dos(90,50);
@@ -4259,7 +4062,6 @@
 				//tres(170,330);
 				dos(90,330+60);
 				uno(170,330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4303,13 +4105,11 @@
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/				
 				//fichas	
 				contexto.translate(0, 660);
-
 				//TEXTO
 				contexto.font="40px Georgia";
 				contexto.fillText("42",420,40);
@@ -4327,7 +4127,6 @@
 				contexto.strokeRect(490, 330, 60, 120);
 				contexto.strokeRect(570, 330, 60, 120);
 				contexto.strokeRect(650, 330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cinco(490, 50);
@@ -4346,7 +4145,6 @@
 				dos(570, 330);
 				cinco(490, 330+60);
 				seis(570, 330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4386,7 +4184,6 @@
 				contexto.moveTo(650, 390);
 				contexto.lineTo(710, 390);
 				contexto.stroke();
-
 				contexto.translate(0, -660);
 			/*
 			/SEIS
@@ -4420,7 +4217,6 @@
 				contexto.strokeRect(150, 190, 60, 120);
 				contexto.strokeRect(230, 190, 60, 120);
 				contexto.strokeRect(310, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(70, 50);
@@ -4437,7 +4233,6 @@
 				//cinco(70, 190+60);
 				dos(150, 190+60);
 				cuatro(230, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4476,7 +4271,6 @@
 			/*
 			/UNO		
 			*/
-
 			/*
 			DOS
 			*/
@@ -4495,7 +4289,6 @@
 				contexto.strokeRect(550, 190, 60, 120);
 				contexto.strokeRect(630, 190, 60, 120);
 				contexto.strokeRect(710, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(550, 50);
@@ -4505,14 +4298,12 @@
 				tres(550, 50+60);
 				//dos(630, 50+60);
 				dos(710, 50+60);
-
 				dos(470, 190);
 				//tres(550, 190);
 				seis(630, 190);
 				tres(470, 190+60);
 				seis(550, 190+60);
 				dos(630, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4551,13 +4342,11 @@
 			/*
 			/DOS
 			*/
-
 			//PRIMER LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 330);
 			contexto.lineTo(800, 330);
 			contexto.stroke();
-
 			/*
 			TRES
 			*/
@@ -4578,7 +4367,6 @@
 				contexto.strokeRect(150, 190, 60, 120);
 				contexto.strokeRect(230, 190, 60, 120);
 				contexto.strokeRect(310, 190, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				dos(70, 50);
@@ -4595,7 +4383,6 @@
 				cuatro(70, 190+60);
 				seis(150, 190+60);
 				tres(230, 190+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4635,7 +4422,6 @@
 			/*
 			/TRES
 			*/
-
 			/*
 			CUATRO
 			*/
@@ -4656,7 +4442,6 @@
 				contexto.strokeRect(490, 330+330, 60, 120);
 				contexto.strokeRect(570, 330+330, 60, 120);
 				contexto.strokeRect(650, 330+330, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				uno(490, 330+50);
@@ -4675,7 +4460,6 @@
 				tres(570, 330+330);
 				cuatro(490, 330+330+60);
 				dos(570, 330+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4719,13 +4503,11 @@
 			/*
 			/CUATRO
 			*/
-
 			//segunda LINEA DE DIVISION
 			contexto.beginPath();
 			contexto.moveTo(0, 800);
 			contexto.lineTo(800, 800);
 			contexto.stroke();
-
 			/*
 			CINCO
 			*/
@@ -4746,7 +4528,6 @@
 				contexto.strokeRect(90, 330+800, 60, 120);
 				contexto.strokeRect(170, 330+800, 60, 120);
 				contexto.strokeRect(250, 330+800, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cinco(90, 800+50);
@@ -4765,7 +4546,6 @@
 				seis(170, 800+330);
 				uno(90, 800+330+60);
 				seis(170, 800+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4809,7 +4589,6 @@
 			/*
 			/CINCO
 			*/
-
 			/*
 			SEIS
 			*/
@@ -4830,7 +4609,6 @@
 				contexto.strokeRect(490, 330+800, 60, 120);
 				contexto.strokeRect(570, 330+800, 60, 120);
 				contexto.strokeRect(650, 330+800, 60, 120);
-
 				//dibujar circulos
 				//parte de abajo de la ficha +60 en y
 				cinco(490, 800+50);
@@ -4849,7 +4627,6 @@
 				cinco(570, 800+330);
 				//dos(490, 800+330+60);
 				dos(570, 800+330+60);
-
 				//lineas centrales
 				//primer linea
 				contexto.beginPath();
@@ -4893,6 +4670,57 @@
 			/*
 			/SEIS
 			*/
+		</script>
+		<!-- Script para poder poner los inputs -->
+		<script type="text/javascript">
+			var canvasArray = document.getElementsByTagName('canvas');
+			for(var i = 0; i < canvasArray.length; i++){
+				document.body.appendChild(document.createElement('div'));
+			}
+			for(var i = 0; i < canvasArray.length; i++){
+				var canvasParent = document.getElementsByTagName('canvas')[i];
+				var div = document.getElementsByTagName('div')[i];
+
+				div.style.top = canvasParent.offsetTop + 'px';
+				div.style.left = canvasParent.offsetLeft + 'px';
+				div.style.width = canvasParent.offsetWidth + 'px';
+				div.style.height = canvasParent.offsetHeight + 'px';
+
+				for(var j = 0; j < 6; j++){
+					var span = document.createElement('span');
+					var att2 = document.createAttribute('class');
+					att2.value = 'div_' + i + '_span_' + j;
+					span.setAttributeNode(att2);
+
+					div.appendChild(span);
+
+					for(var n = 0; n < 2; n++){
+						var input = document.createElement('input');
+						var att3 = [document.createAttribute('type'), document.createAttribute('maxlength'), document.createAttribute('class'), document.createAttribute('id') ];
+						att3[0].value = 'text';
+						att3[1].value = '1';
+						att3[2].value = 'input_' + n;
+						att3[3].value = 'input_' + i + '_' + j + '_' + n;
+						input.setAttributeNode(att3[0]);
+						input.setAttributeNode(att3[1]);
+						input.setAttributeNode(att3[2]);
+						input.setAttributeNode(att3[3]);
+
+						span.appendChild(input);
+					}
+				}
+			}
+
+			function resizeDiv(){
+				var div = document.getElementsByTagName('div');
+				for(var i = 0; i < div.length; i++){
+					var canvasParent = document.getElementsByTagName('canvas')[i];
+					document.getElementsByTagName('div')[i]
+						.style.top = canvasParent.offsetTop + 'px';
+					document.getElementsByTagName('div')[i]
+						.style.left = canvasParent.offsetLeft + 'px';
+				}
+			}
 		</script>
 	</body>
 </html>
