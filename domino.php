@@ -209,9 +209,13 @@
 			}
 
 		</style>
-			<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body onresize="resizeDiv()">
+		<h1>Bienvenido <?=$_SESSION["nombre"]?></h1>
+		<br>
+		<h2>Instrucciones:</h2>
+		<p>Pon la ficha que consideres sea la que siga correspondiendo a la secuencia que existe</p>
+		<br>
 		<form action="">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 			style = "border: 1px solid black;">
@@ -4735,17 +4739,5 @@
 				}
 			</script>
 		</form>
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					BIenvenido <?=$_SESSION["nombre"]?>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon glyphicon-log-out"></span> Cerrar Sesion</a></li>
-				</ul>
-			</div>
-		</nav>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
