@@ -201,22 +201,35 @@
 			}
 
 		</style>
-  		<link href="css/bootstrap.min.css" rel="stylesheet">
+			<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body onresize="resizeDiv()">
-		<nav class="navbar navbar-inverse">
-	    <div class="container">
-	      <div class="navbar-header">
-	        <ul class="nav navbar-nav navbar-right">
-	          <li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bienvenido <?=$_SESSION["nombre"]?><span class="caret"></span></a>
-	            <ul class="dropdown-menu">
-	              <li><a href="morir.php">Cerrar Sesion</a></li>
-	            </ul>
-	          </li>
-	        </ul>
-	      </div>
-	    </nav>
+		<nav class="navbar navbar-light bg-faded">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<ul class="nav navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+					<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+			</ul>
+			<form class="form-inline float-xs-right">
+				<input class="form-control" type="text" placeholder="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		</nav>
 		<form action="">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 			style = "border: 1px solid black;">
@@ -665,7 +678,7 @@
 				*/
 				function uno(x,y) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(30+x, 30+y, 5, 0, Math.PI*2);
@@ -673,7 +686,7 @@
 				}
 				function dos(x,y) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(45+x, 15+y, 5, 0, Math.PI*2);
@@ -684,7 +697,7 @@
 				}
 				function tres(x,y) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(30+x, 30+y, 5, 0, Math.PI*2);
@@ -698,7 +711,7 @@
 				}
 				function cuatro(x,y) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(15+x, 15+y, 5, 0, Math.PI*2);
@@ -715,7 +728,7 @@
 				}
 				function cinco(x,y) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(30+x, 30+y, 5, 0, Math.PI*2);
@@ -735,7 +748,7 @@
 				}
 				function seis(x,y) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(15+x, 15+y, 5, 0, Math.PI*2);
@@ -1723,7 +1736,7 @@
 				//loop para la sdos columnas
 				/*for (var k = 0; k < 2; k++) {
 					//loop para dibujar por columnas
-					for (var j =  0; j < 6; j++) {
+					for (var j =	0; j < 6; j++) {
 						for (var i = 0; i < 3; i++) {
 							for (var h = 1; h < 4; h++) {
 								for (var n = 1; n < 3; n++) {
@@ -2286,7 +2299,7 @@
 				//loop para la sdos columnas
 				/*for (var k = 0; k < 2; k++) {
 					//loop para dibujar por columnas
-					for (var j =  0; j < 6; j++) {
+					for (var j =	0; j < 6; j++) {
 						for (var i = 0; i < 3; i++) {
 							for (var h = 1; h < 4; h++) {
 								for (var n = 1; n < 3; n++) {
@@ -3493,7 +3506,7 @@
 				*/
 				function unoEspecial(x,y,n,z) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc((n*2)+x, (n*2)+y, z, 0, Math.PI*2);
@@ -3501,7 +3514,7 @@
 				}
 				function dosEspecial(x,y,n,z) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc((n*3)+x, n+y, z, 0, Math.PI*2);
@@ -3512,7 +3525,7 @@
 				}
 				function tresEspecial(x,y,n,z) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc((n*2)+x, (n*2)+y, z, 0, Math.PI*2);
@@ -3526,7 +3539,7 @@
 				}
 				function cuatroEspecial(x,y,n,z) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(n+x, n+y, z, 0, Math.PI*2);
@@ -3543,7 +3556,7 @@
 				}
 				function cincoEspecial(x,y,n,z) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc((n*2)+x, (n*2)+y, z, 0, Math.PI*2);
@@ -3563,7 +3576,7 @@
 				}
 				function seisEspecial(x,y,n,z) {
 					//circulos +15 primer linea
-					//+30  segunda linea
+					//+30	segunda linea
 					//+45 tercer linea
 					contexto.beginPath();
 					contexto.arc(n+x, n+y, z, 0, Math.PI*2);
