@@ -216,7 +216,7 @@
 		<h2>Instrucciones:</h2>
 		<p>Pon la ficha que consideres sea la que siga correspondiendo a la secuencia que existe</p>
 		<br>
-		<form action="calificar.php" method="POST">
+		<form action="calificar.php" method="POST" onsubmit="return calificar()">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 			style = "border: 1px solid black;">
 			Su navegador no soporta el elemento canvas.
@@ -4739,7 +4739,7 @@
 				/*
 				/SEIS
 				*/
-			</script>
+			</script><script type="text/javascript" src="js/calificar.js"></script>
 			<br>
 			<br>
 			<input type="submit" name="Calificaar">
