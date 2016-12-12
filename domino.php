@@ -210,13 +210,13 @@
 
 		</style>
 	</head>
-		<form action="calificar.php" method="POST">
 	<body onresize="resizeDiv()">
 		<h1>Bienvenido <?=$_SESSION["nombre"]?></h1>
 		<br>
 		<h2>Instrucciones:</h2>
 		<p>Pon la ficha que consideres sea la que siga correspondiendo a la secuencia que existe</p>
 		<br>
+		<form action="calificar.php" method="POST">
 			<canvas id = "dibujarRectangulo" class="canvasLocas" width = "800" height = "1130"
 			style = "border: 1px solid black;">
 			Su navegador no soporta el elemento canvas.
@@ -258,6 +258,59 @@
 			style = "border: 1px solid black;">
 			Su navegador no soporta el elemento canvas.
 			</canvas>
+			<!-- Script para poder poner los inputs -->
+			<script type="text/javascript">
+				var canvasArray = document.getElementsByTagName('canvas');
+				for(var i = 0; i < canvasArray.length; i++){
+					document.body.appendChild(document.createElement('div'));
+				}
+				for(var i = 0; i < canvasArray.length; i++){
+					var canvasParent = document.getElementsByTagName('canvas')[i];
+					var div = document.getElementsByTagName('div')[i];
+
+					div.style.top = canvasParent.offsetTop + 'px';
+					div.style.left = canvasParent.offsetLeft + 'px';
+					div.style.width = canvasParent.offsetWidth + 'px';
+					div.style.height = canvasParent.offsetHeight + 'px';
+
+					for(var j = 0; j < 6; j++){
+						var span = document.createElement('span');
+						var att2 = document.createAttribute('class');
+						att2.value = 'div_' + i + '_span_' + j;
+						span.setAttributeNode(att2);
+
+						div.appendChild(span);
+
+						for(var n = 0; n < 2; n++){
+							var input = document.createElement('input');
+							var att3 = [document.createAttribute('type'), document.createAttribute('maxlength'), document.createAttribute('class'), document.createAttribute('id'), document.createAttribute('name') ];
+							att3[0].value = 'text';
+							att3[1].value = '1';
+							att3[2].value = 'input_' + n;
+							att3[3].value = 'input_' + i + '_' + j + '_' + n;
+							att3[4].value = 'input_' + i + '_' + j + '_' + n;
+							input.setAttributeNode(att3[0]);
+							input.setAttributeNode(att3[1]);
+							input.setAttributeNode(att3[2]);
+							input.setAttributeNode(att3[3]);
+							input.setAttributeNode(att3[4]);
+
+							span.appendChild(input);
+						}
+					}
+				}
+
+				function resizeDiv(){
+					var div = document.getElementsByTagName('div');
+					for(var i = 0; i < div.length; i++){
+						var canvasParent = document.getElementsByTagName('canvas')[i];
+						document.getElementsByTagName('div')[i]
+							.style.top = canvasParent.offsetTop + 'px';
+						document.getElementsByTagName('div')[i]
+							.style.left = canvasParent.offsetLeft + 'px';
+					}
+				}
+			</script>
 			<!--Script para primer canvas-->
 			<script>
 				var canvas = document.getElementById("dibujarRectangulo");
@@ -4687,62 +4740,9 @@
 				/SEIS
 				*/
 			</script>
-			<!-- Script para poder poner los inputs -->
-			<script type="text/javascript">
-				var canvasArray = document.getElementsByTagName('canvas');
-				for(var i = 0; i < canvasArray.length; i++){
-					document.body.appendChild(document.createElement('div'));
-				}
-				for(var i = 0; i < canvasArray.length; i++){
-					var canvasParent = document.getElementsByTagName('canvas')[i];
-					var div = document.getElementsByTagName('div')[i];
-
-					div.style.top = canvasParent.offsetTop + 'px';
-					div.style.left = canvasParent.offsetLeft + 'px';
-					div.style.width = canvasParent.offsetWidth + 'px';
-					div.style.height = canvasParent.offsetHeight + 'px';
-
-					for(var j = 0; j < 6; j++){
-						var span = document.createElement('span');
-						var att2 = document.createAttribute('class');
-						att2.value = 'div_' + i + '_span_' + j;
-						span.setAttributeNode(att2);
-
-						div.appendChild(span);
-
-						for(var n = 0; n < 2; n++){
-							var input = document.createElement('input');
-							var att3 = [document.createAttribute('type'), document.createAttribute('maxlength'), document.createAttribute('class'), document.createAttribute('id'), document.createAttribute('name') ];
-							att3[0].value = 'text';
-							att3[1].value = '1';
-							att3[2].value = 'input_' + n;
-							att3[3].value = 'input_' + i + '_' + j + '_' + n;
-							att3[4].value = 'input_' + i + '_' + j + '_' + n;
-							input.setAttributeNode(att3[0]);
-							input.setAttributeNode(att3[1]);
-							input.setAttributeNode(att3[2]);
-							input.setAttributeNode(att3[3]);
-							input.setAttributeNode(att3[4]);
-
-							span.appendChild(input);
-						}
-					}
-				}
-
-				function resizeDiv(){
-					var div = document.getElementsByTagName('div');
-					for(var i = 0; i < div.length; i++){
-						var canvasParent = document.getElementsByTagName('canvas')[i];
-						document.getElementsByTagName('div')[i]
-							.style.top = canvasParent.offsetTop + 'px';
-						document.getElementsByTagName('div')[i]
-							.style.left = canvasParent.offsetLeft + 'px';
-					}
-				}
-			</script>
 			<br>
 			<br>
 			<input type="submit" name="Calificaar">
-	</body>
 		</form>
+	</body>
 </html>
