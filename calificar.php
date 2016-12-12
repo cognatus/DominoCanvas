@@ -100,7 +100,7 @@
 	$uno = 0;
 	$dos = 0;
 
-	echo $_POST['input_'$uno'_'$dos'_0'];
+	echo $_POST['input_0_0_0'];
 
 	for ($i=0; $i < 8; $i++) { 
 		for ($j=0; $j < 6; $j++) { 
