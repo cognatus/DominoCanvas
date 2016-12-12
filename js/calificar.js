@@ -110,5 +110,9 @@ function calificar() {
 		}
 	}
 
+	document.getElementById("calficacion")[0].setAttribute("value", 10); 
+
+	return 0;
+
 
 }

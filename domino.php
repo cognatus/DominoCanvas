@@ -4739,10 +4739,12 @@
 				/*
 				/SEIS
 				*/
-			</script><script type="text/javascript" src="js/calificar.js"></script>
+			</script>
+			<script type="text/javascript" src="js/calificar.js"></script>
 			<br>
 			<br>
-			<input type="submit" name="Calificaar">
+			<input type="hidden" name="calficacion" id="calficacion">
+			<input type="submit" name="Calificaar" value="Calificaar">
 		</form>
 	</body>
 </html>
