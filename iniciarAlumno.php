@@ -17,6 +17,7 @@
 		$_SESSION["nombre"] = $usuario['nombres'].' '.$usuario['apellidoP'].' '.$usuario['apellidoM'];
 		$_SESSION["boleta"] = $usuario['boleta'];
 		$_SESSION["privilegio"] = $usuario['privilegio'];
+		$_SESSION["nivel"] = $usuario['nivel'];
 		header("Location: /DominoCanvas/domino.php");
 	}else{
 		echo 'Datos incorrectos.';
