@@ -131,19 +131,23 @@
 			input#input_4_0_0, input#input_4_5_0 {
 				bottom: 98px;
 				right: 128px; 
+				transform: rotate(-35deg);
 			}
 			input#input_4_0_1, input#input_4_5_1{
 				bottom: 48px;
 				right: 94px; 
+				transform: rotate(-35deg);
 			}
 
 			input#input_4_1_0{
 				bottom: 124px;
 				right: 94px; 
+				transform: rotate(20deg);
 			}
 			input#input_4_1_1{
 				bottom: 104px;
 				right: 38px; 
+				transform: rotate(20deg);
 			}
 			input#input_4_2_0{
 				bottom: 73px;
@@ -156,10 +160,12 @@
 			input#input_4_3_0{
 				bottom: 75px;
 				left: 155px;
+				transform: rotate(10deg);
 			}
 			input#input_4_3_1{
 				bottom: 16px;
-				left: 145px; 
+				left: 145px;
+				transform: rotate(10deg);
 			}
 			input#input_4_4_0{
 				bottom: 67px;
